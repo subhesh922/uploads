@@ -1,0 +1,759 @@
+﻿"ID","Function","Potential Failure Mode","Image1 - Failure Mode","Image2 - Failure Mode","TDM","SPR","Potential Failure Effects","SEVERITY","Potential Causes","Image - Root Cause","OCCURRENCE","Preventive Controls","Image - Prevention","Detection Controls","Image - Detection","DETECTION","RPN","PFMEA Linkage","SPRRefLink","JIRA","JIRARefLink"
+"1","Trigger","Intermittent scan when actuating trigger button","TDM-Trigger-001-FM1.png",,"QUAL-LIB-438
+QUAL-LIB-597","SPR 29520
+SPR 37082","Intermittent operation of scan engine","4","Worn out rubber boot allowing for dust accumulation in the trigger assembly resulting to interruption of electrical connection","eda10e09-75a3-427a-9d8c-42c9fc4a316b.png","4","Design actuation posts that allows for distributed actuation load (maximum surface contact area) as opposed to point load resulting to premature contact point wear out.","TDM-Trigger-001-P.png","Trigger button actuation life cycle test",,"5","80","No","https://spr.zebra.com/ViewSPR.aspx?sprID=25920",,
+"2","Trigger","Cracking of the plastic button","content.png",,"QUAL-LIB-528","SPR 21870","Unable to actuate the trigger","8","Thermal expansion stress from insert molded metal.",,"3","Use of soft transition material such as Silicone (dip and cure insert prior to molding)",,"Simulation test to assess difference in thermal expansion rates",,"3","72","No","https://spr.zebra.com/ViewSPR.aspx?sprID=21870",,
+"3","Trigger","Cracking of the plastic button","Picture4.png",,"QUAL-LIB-528","SPR 21870","Unable to actuate the trigger","8","Plastic material has low chemical resistance under constant stress",,"3","Use semi-crystalline materials such as Celcon M90 (POM)",,"Chemical resistance test",,"3","72","No","https://spr.zebra.com/ViewSPR.aspx?sprID=21870",,
+"4","Trigger","Trigger button not working","Picture5.png",,"QUAL-LIB-611","SPR 39505","Unable to activate scan engine","8","Fatigue damage to FPC trigger button sub-assembly due to repeated contact and separation with the button plastic component","17380878-d91e-49f4-929c-8ed7bf8a3fe4.png","3","Trigger stack up tolerance analysis to allow for sufficient clearance from FPC when button is activated",,"Trigger actuation life test with applied force towards the higher side of expected range","Picture7.png","4","96","No","https://spr.zebra.com/ViewSPR.aspx?sprID=39505",,
+"5","Trigger","Trigger button not working","Picture5.png",,"QUAL-LIB-611","SPR 39505","Unable to activate scan engine","8","Fatigue damage to FPC trigger button sub-assembly due to repeated contact and separation with the button plastic component","dd8cdb0a-ac51-4178-aee5-3185395ae416.png","3","Trigger stack up tolerance analysis to allow for sufficient clearance from FPC when button is activated",,"Teardown inspection following completion of actuation life test","Picture7.png","3","72","No","https://spr.zebra.com/ViewSPR.aspx?sprID=39505",,
+"6","Acoustics and Audio","Beeper function inoperative",,,"QUAL-LIB-527",,"No beep sound to confirm successful scan.","6","Single solder pad design does not provide sufficient solder shear strength to sustain stress induced during Mechanical testing e.g. Drops or Tumble test.","e53aa543-f3e4-465a-831b-fdbfb2f03749.png","4","Adopt web solder pad design instead of single solder pad design",,"Teardown inspection to confirm solder condition after Drops and Tumble test",,"3","72","No",,,
+"7","Acoustics and Audio","Water ingress on speaker",,,"QUAL-LIB-394",,"No audio output","6","Speaker sealing surface not flat and not smooth","qualib394_pic1.png","4","Locate tool ejector pin and mold gates way from sealing surface areas",,"Dust and water ingress protection test",,"3","72","No",,,
+"8","Acoustics and Audio","Distorted audio",,,"QUAL-LIB-435",,"Poor audio quality","5","Improper fitting of acoustic seal due to poor keypad mold and acoustic sealing design.","qualib435_pic1.png","4","Design mold and pin insert for proper fitting.",,"Audio quality tests and Ingress Protection tests",,"3","60","No",,,
+"9","Acoustics and Audio","Distorted audio",,,"QUAL-LIB-441",,"Poor audio quality","5","Speaker coil wire fatigue","qualib441_pic1.png","5","Compliance to part specifications",,"Speaker Stress Test",,"3","75","No",,,
+"10","Acoustics and Audio","Distorted audio",,,"QUAL-LIB-441",,"Poor audio quality","5","Speaker coil wire fatigue","qualib441_pic1.png","5","Compliance to part specifications",,"Build-as-Designed (BAD) analysis",,"3","75","No",,,
+"11","Acoustics and Audio","Distorted audio",,,"QUAL-LIB-447","SPR 26630
+SPR 17341
+SPR 26239
+SPR 48162
+SPR 51120
+SPR 52738
+SPR 52637
+SPR 53842
+SPR 53040
+","Poor audio quality","5","Insufficient acoustic enclosure design allowed foreign material to accumulate on Speaker","b8e53bd2-476a-40eb-bd5e-730f9fa61f38.png","4","Compliance to part specifications",,"Dust and water ingress protection test",,"3","60","No","https://spr.zebra.com/ViewSPR.aspx?sprID=26630",,
+"12","USB","Broken USB connector","qualib449_pic1.png",,"QUAL-LIB-449",,"No USB connection","6","Insufficient connector mechanical support",,"4","Add mechanical anchor re-inforcement on connectors",,"Bend test with cable attached to terminal",,"3","72","No",,,
+"13","Power","Cradle pin cross contact to incorrect Terminal pin","qualib450_pic1.png",,"QUAL-LIB-450",,"Electrical damage to Terminal resulting to feature loss","6","Key alignment feature insufficient to prevent cross contact when Terminal is docked in random fashion",,"5","The complete range of motion must be evaluated when analyzing terminal-to-cradle interface since the end  user will dock the terminal in a random fashion.  Geometry of the terminal-to-cradle interface must be verified to prevent misalignment of the connection under multiple insertion/ placement scenarios. 
+CAD models should be manipulated to evaluate worst case docking orientations and angles. Tolerance analyses performed with the system in these configurations.","qualib450_pic2.png.jpg","Insertion life test with complete range of motions while docking followed by full function check","qualib450_pic3.png.jpg","3","90","No",,,
+"14","Power","Cradle not charging terminal","qualib451_pic1.png","qualib451_pic2.png","QUAL-LIB-451","SPR 20242","Device not working.  Battery not charged.","6","Misalignment between cradle pogo pins and Terminal I/O connector contacts. ",,"5","Define critical dimensions on 2D print",,"Confirm pin-to-charge contact alignment during insertion test","qualib451_pic3.png","3","90","No",,,
+"15","Power","Melted plastic housing during charging","qualib452_pic1.png",,"QUAL-LIB-452",,"Electrical damage to Terminal resulting to feature loss","6","Misalignment between cradle pogo pins and Terminal I/O connector contacts. ",,"5","EE / ME design guidelines","qualib452_pic2.png","Terminal insertion life test with device in operating mode",,"3","90","No",,,
+"16","Power","Intermittent connection between device and power cable","qualib453_pic1.png","qualib453_pic2.png","QUAL-LIB-453",,"Intermittent function loss","6","Critical dimension/alignment and tolerances were not defined for proper connection",,"5","Tolerance analysis on critical dimensions",,"Measure contact pressure on contact pins",,"3","90","No",,,
+"17","Power","Broken USB cable","qualib529_pic1.png",,"QUAL-LIB-529",,"No USB connection","6","Premature fatigue failure due to insufficient glue coverage used as strain relief ",,"4","Compliance to part specs","qualib529_pic2.png","Cable bend cycle test",,"3","72","No",,,
+"18","Power","Pogo pins wearing out prematurely on vehicle cradle","qualib600_pic1.png",,"QUAL-LIB-600 ","
+SPR 38423
+SPR 32620","Intermittent connection between cradle and terminal","4","Terminal is not fully secured to cradle due to lack of sufficient retention feature to prevent movement","qualib600_pic2.png","4","Position pogo pins in 90 degree offset from the vertical direction to avoid impact from weight of terminal","qualib600_pic3.png","Insertion life test in random fashion","qualib600_pic4.png","3","48","No",,,
+"19","Battery and Interconnect","Spare battery gets unseated from charge cradle battery compartment","qualib590_pic1.png",,"QUAL-LIB-590","SPR 36205","Charging failure","8","Insufficient engagement between retention clip and spare battery","qualib590_pic2.png","4","Define spare battery retention force in battery compartment","qualib590_pic3.png","Measure battery retention force",,"3","96","No",,,
+"20","Battery and Interconnect","Battery contact chatter","qualib458_pic1.png",,"QUAL-LIB-458",,"Intermittent battery connection","6","Dimensions incompatibility due to parts tolerance",,"4","Define critical dimensions on print and perform tolerance analysis",,"Design margin testing",,"4","96","No",,,
+"21","Battery and Interconnect","Swelling of battery pack","qualib461_pic1.png",,"QUAL-LIB-461",,"Failure to operate","8","Continuous battery discharge due to lack of independent HW comparator",,"3","Define under voltage threshold within the battery cell capability",,"Verify power sequence with device going to suspend when power key is pressed following critical suspend",,"3","72","No",,,
+"22","Battery and Interconnect","Swelling of battery pack","qualib461_pic1.png",,"QUAL-LIB-461",,"Failure to operate","8","Continuous battery discharge due to lack of independent HW comparator",,"3","Verify use of comparator independent of PMIC to disconnect battery from terminal at critical voltage level for software lockup immunity",,"Verify power sequence with device going to suspend when power key is pressed following critical suspend",,"3","72","No",,,
+"23","Battery and Interconnect","Solder joint crack on battery contact block pins",,,"QUAL-LIB-462","SPR 25880","Failure to operate","8","Shear force on contact block during battery insertion to terminal",,"4","Add mechanical support feature to battery contact block",,"Battery insert / remove life test",,"3","96","No","https://spr.zebra.com/ViewSPR.aspx?sprID=25880",,
+"24","Battery and Interconnect","Crack on Thermistor FPC","qualib463_pic1.png",,"QUAL-LIB-463",,"Failure to operate","8","Battery FPC layout and connector pin design",,"4","No step on FPC path","qualib463_pic2.png","Drops and Tumble Tests",,"3","96","No",,,
+"25","Battery and Interconnect","Crack on Thermistor FPC","qualib463_pic1.png",,"QUAL-LIB-463",,"Failure to operate","8","Battery FPC layout and connector pin design",,"4","No ""Z"" type bending on FPC","qualib463_pic2.png","Drops and Tumble Tests",,"3","96","No",,,
+"26","Battery and Interconnect","Broken battery terminal contacts","qualib464_pic1.png","qualib464_pic2.png","QUAL-LIB-464
+QUAL-LIB-465",,"Failure to operate","8","Insufficient mechanical strength to hold large battery mass during drop",,"4","Add mechanical support feature to prevent battery cell movement",,"Drops and Tumble Tests",,"3","96","No",,,
+"27","Battery and Interconnect","Battery not charging","qualib466_pic1.png",,"QUAL-LIB-466",,"Failure to operate","8","Battery contacts misalignment due to parts tolerance stack-up",,"4","Tolerance analysis on critical dimensions",,"Battery inserion life test in random fashion",,"3","96","No",,,
+"28","Battery and Interconnect","Pogo pins broken / detached","qualib459_pic1.png",,"QUAL-LIB-459","SPR 19673","Failure to operate","8","Pogo pins and battery housing colliding due to Interference during battery installation. 
+",,"4","Design should consider the full range of motion of the battery during installation and removal to eliminate possibility of interference with pogo pins",,"Battery insert/ remove life test",,"3","96","No","https://spr.zebra.com/ViewSPR.aspx?sprID=19673",,
+"29","Battery and Interconnect","Contact pins solder joint fracture","qualib467_pic1.png",,"QUAL-LIB-467","SPR 28035","Failure to operate","8","Interference between battery connector housing and main PCB connector housing causing the solder joints on the battery pins under constant stress.",,"4","Maintain sufficient clearance between mating connector housings or provision hard stop to prevent interference.",,"Drop Test, Tumble Test, AFM, Teardown Inspection",,"3","96","No","https://spr.zebra.com/ViewSPR.aspx?sprID=28035",,
+"30","Battery and Interconnect","Glue overflow to connector","qualib468_pic1.png",,"QUAL-LIB-468","SPR 29836","Failure to operate","8","Gap between battery connector pin interface and battery housing which increased over time resulting to moisture ingress.",,"4","Mating surface seal design guidelines to maintain seal integrity over the expected life of the product",,"Thermal Shock followed by Ingress Protection test; 
+Serialized IP test",,"3","96","No","https://spr.zebra.com/ViewSPR.aspx?sprID=29836",,
+"31","Battery and Interconnect","Nickel metal tab connecting battery cell to PCBA fractured during Vibration test breaking electrical
+connection","qualib530_pic1.png",,"QUAL-LIB-530",,"Failure to operate","8","Nickel tab bend radius forced in a sharp bend due to lack of room for a more gradual bend.","qualib530_pic2.png","4","Use of flexible connection approach between battery cell PCBA with sufficient room for a gradual bend radius.
+Provide forming fixture during the assembly process to avoid inducing stress nickel tab.",,"Vibration Test
+Drop Test 
+Tumble Test 
+AFM 
+X-ray Inspection 
+Teardown Inspection",,"3","96","Yes",,,
+"32","Battery and Interconnect","Internal thermistor lead broke during vibration testing","qualib531_pic1.png",,"QUAL-LIB-531",,"Failure to operate","8","No strain relief on Thermistor wire between the thermistor bonding site to the solder connection on the PCBA.",,"4","Provide strain relief for the Thermistor connection to the PCBA",,"Vibration Test
+Drop Test
+Tumble Test
+X-ray Inspection
+Teardown Inspection",,"3","96","No",,,
+"33","Battery and Interconnect"," Soldering crack on battery connector after drop test","qualib532_pic1.png",,"QUAL-LIB-532",,"Failure to operate","8","No reinforcement feature for the connector to withstand impact shock during drops.",,"3","Add supporting feature to the connector such as crush ribs.","qualib532_pic2.png","Drops and Tumble tests",,"3","72","No",,,
+"34","Battery and Interconnect","Water ingress into the battery connector area during field use. Device is powering off.","qualib581_pic1.png",,"QUAL-LIB-581","SPR 29863","Failure to operate","8","Battery sealing surfaces sustained damage during stand alone drops. ",,"4","Battery sealing surface should be designed to be recessed to prevent direct impact when accidentally dropped.  Add mechanical features such as rubs to protect critical sealing surfaces.",,"Drop simulation study for battery sealing surface.
+Serialized IP testing for standalone batteries.",,"3","96","No",,,
+"35","Battery and Interconnect"," Water pooling on the terminal's battery connector during field battery swap under heavy rain environment.","qualib582_pic1.png",,"QUAL-LIB-582",,"Failure to operate","8","Battery connector is located at the bottom of the TC7X battery well. Water will collect at the terminal connector when the battery is being swapped in the field when under heavy rain.",,"4","Battery connector should be strategically located such that water collects in the unsealed portion of the battery
+compartment during normal battery removal in it's typical orientation. 
+Battery compartment design should have features to promote liquids to flow away from the battery connector. 
+Define requirement in PRD to not allow water build up in battery connector area when battery is swapped under rain environment.",,"IPXX test without battery.
+IPXX test with battery.
+Serialized IP test.",,"3","96","No",,,
+"36","Battery and Interconnect","Battery Latch requires excessive force to engage.  
+TC51 experience.","qualib592_pic1.png",,"QUAL-LIB-592","SPR 34186
+SPR 34749","Poor customer experience due to difficulty in installing the battery.","6","Insufficient tolerance stack-up analysis.  Geometry of battery and terminal mating surfaces creeped away from nominal dimensions resulting to significant amount of compression force to close the latch.
+Critical dimension between mating surface  not specified on drawing.",,"4","Define engagement force requirement of battery to Terminal in PRD.
+Define critical dimensions on mating parts and conduct tolerance stack-up analysis.
+",,"Worst case simulation of CAD data stack-up on moving part interfaces.",,"4","96","No","https://spr.zebra.com/ViewSPR.aspx?sprID=34186",,
+"37","Battery and Interconnect","Battery cap breaks off during drops. Unable to remove battery from headset and unable to be charged.
+Experienced on Viking headset.","qualib593_pic1.png",,"QUAL-LIB-593","SPR 36700","Failure to operate","8","Battery cap is attached to battery pack using glue dispensed on cap and battery pack retention features which is difficult to control and therefore not consistent.",,"4","Use of mechanical fastener to attached cap to battery pack.",,"Battery install/ remove life test.
+Drop test
+Tumble test
+",,"3","96","No","https://spr.zebra.com/ViewSPR.aspx?sprID=36700",,
+"38","Battery and Interconnect","Pogo pins height became depressed on WT6000 battery connector","qualib595_pic1.png",,"QUAL-LIB-595","SPR 36137","Failure to operate","8","During drop sequence on AFM test it was observed that the battery connector pogo pins were depressed.
+Investigation showed the pogo pins were pushing out the back of the connector housing.
+The pogo housing retention force is not sufficient to maintain pogo pin heights during impact.","70bfb4fd-edb0-48f8-a23c-e0e311ebdec3.png","4","Design of pogo pin housing should have retention force to maintain pogo pin heights on impact such as support feature under the pogo connector.","qualib595_pic3.png","Drop test.
+Tumble test.
+AFM test.
+Teardown inspection.
+Review of supplier test data on pogo pin life tests.",,"3","96","No","https://spr.zebra.com/ViewSPR.aspx?sprID=36137",,
+"39","Wi-Fi","LAN & GPS antennae broke off during drop test","qualib482_pic1.png",,"QUAL-LIB-482",,"Unable to connect to Wi-Fi and GPS","5","Poor anchoring.",,"4","Design for adequate anchoring such as more than one screw to support antenna assembly or add epoxy for reinforcement.
+Pad size optimization for good solder joint. 
+Design to account for part interference during drops and tumbles. ",,"Drop tests.
+Tumble test.
+",,"3","60","No",,,
+"40","Wi-Fi","Poor radio signal strength.","qualib483_pic1.png",,"QUAL-LIB-483","SPR 16684","Poor WLAN and GPS connectivity.","5","Inadequate details on part drawing for minimum wire stripping, wire forming and proper routing/ bending. ",,"4","3D model and tolerance analysis must allow for adequate wire/insulation space within the assembly.
+Crimp type antenna connectors have specified pull force.
+Design or manufacturing specification identifies minimum wire stripping, wire forming, proper routing/bending to minimize variation.
+Shield solder area has adequate solder pad size/dimension for hand soldering.
+Insulation present up to solder joint (no unshielded, stripped bare wire suspended beyond solder joint).
+Solder flux splatter must not find its way to other PCB areas, assemblies or parts. ",,"Vibration, Drops, Tumble tests and measure radio transmit and receive signal strength.
+Process control including Go/NG gage for solder strips, visual inspection of wire soldering and SPC for connector pull force.
+",,"3","60","Yes",,,
+"41","GPS","LAN & GPS antennae broke off during drop test","qualib482_pic1.png",,"QUAL-LIB-482",,"Unable to connect to Wi-Fi or GPS","7","Poor anchoring.",,"4","Design for adequate anchoring such as more than one screw to support antenna assembly or add epoxy for reinforcement.
+Pad size optimization for good solder joint. 
+Design to account for part interference during drops and tumbles.",,"Drop tests.
+Tumble test.",,"3","84","No",,,
+"42","GPS","Poor radio signal strength.","qualib483_pic1.png",,"QUAL-LIB-483","16684","Poor WLAN and GPS connectivity.","5","Inadequate details on part drawing for minimum wire stripping, wire forming and proper routing/ bending",,"4","3D model and tolerance analysis must allow for adequate wire/insulation space within the assembly.
+Crimp type antenna connectors have specified pull force.
+Design or manufacturing specification identifies minimum wire stripping, wire forming, proper routing/bending to minimize variation.
+Shield solder area has adequate solder pad size/dimension for hand soldering.
+Insulation present up to solder joint (no unshielded, stripped bare wire suspended beyond solder joint).
+Solder flux splatter must not find its way to other PCB areas, assemblies or parts.",,"Vibration, Drops, Tumble tests and measure radio transmit and receive signal strength.
+Process control including Go/NG gage for solder strips, visual inspection of wire soldering and SPC for connector pull force.",,"3","60","Yes",,,
+"43","USB","Connector broken","qualib449_pic1.png",,"QUAL-LIB-449",,"No USB connection","6","Insufficient mechanical support.
+Poor solder joint.",,"4","Design should provision for adequate mechanical anchoring.
+Design and component selection should minimize component overhang from PCB to eliminate cantilever effects.",,"Bend testing with cable inserted into connector to identify weak points.
+",,"3","72","No",,,
+"44","USB","Cradle pin cross contact to incorrect Terminal pin","qualib450_pic1.png",,"QUAL-LIB-450",,"Loss of USB connection","6","Poor alignment between terminal and cradle as cradle pins come into close proximity with terminal connector.",,"5","The complete range of motion must be evaluated when analyzing terminal-to-cradle interface since the end  user will dock the terminal in a random fashion.  Geometry of the terminal-to-cradle interface must be verified to prevent misalignment of the connection under multiple insertion/ placement scenarios. 
+CAD models should be manipulated to evaluate worst case docking orientations and angles. Tolerance analyses performed with the system in these configurations.","qualib450_pic2.png.jpg","Insertion life test with complete range of motions while docking followed by full function check.","qualib450_pic3.png.jpg","3","90","No",,,
+"45","USB","Corrosion on USB connector","qualib454_pic1.png",,"QUAL-LIB-454","6","Loss of USB function.","6","Poor use case definition and poor mechanical design anticipating failure during typical use resulting to USB connector corroding due to customer environmental use-case.",,"4","Define customer use-case environment.
+Design compatible plating, mating geometries, tolerance and alignment/ compression or contact area impedance meets expected connector useful life.",,"IPXX test.
+Insertion life test.
+Tug/ bend and rotation test.
+Chemical resistance test.",,"3","72","No",,,
+"46","USB"," Cracked solder joints on micro USB receptacle","qualib455_pic1.png",,"QUAL-LIB-455","SPR 25159
+SPR 24962","Loss of USB function","6","Insufficient micro USB receptacle mounting/solder strength to withstand daily usage. 
+ 
+(Micro USB's are being used more than expected on devices and need to make sure design is robust enough to withstand  increase of use).",,"4","Provide design features that would prevent relative motion of the receptacle.  If design is limited, add epoxy for reinforcement.
+Consider Organic Solder Preservative (OSP) or Electroless Nickel Electroless Palladium Immersion Gold (ENEPIG) plating instead of Electroless Nickel Immersion Gold (ENIG) on PCB.",,"Insertion life test.
+Test to point of failure to establish design margin.
+",,"3","72","Yes",,,
+"47","USB"," USB adapter disconnects easily from terminal during use","qualib456_pic1.png",,"QUAL-LIB-456","SPR 24037
+SPR 27126","Loss of USB connection","6","The micro USB connector has insufficient strength to withstand being pulled out of the inner-mold/ over-mold on lateral forces. ",,"4","Select robust connector design i.e. with top and bottom covers providing greater resistance against lateral forces.
+Tolerance analysis to maintain minimum gap between the connector over-mold and receptacle to limit pivoting.",,"Perform off-axis bend testing to establish force required to cause failure and expose failure mode.  Do not limit testing to only the axis of insertion.",,"3","72","No",,,
+"48","Enclosure","Magnets are falling off from the snap-on USB charge cable.","qualib389_pic1.png",,"QUAL-LIB-389","SPR 30052
+SPR 28300","Loss of USB function","6","Cable design is lacking sufficient retaining feature for the magnet",,"4","Design retaining features that will constrain the magnet from moving in XYZ directions.",,"Vibration test.
+Drop test.
+Tumble test.",,"3","72","No","https://spr.zebra.com/ViewSPR.aspx?sprID=30052",,
+"50","Enclosure","Finger print reader detached from holder","qualib391_pic1.png",,"QUAL-LIB-391",,"Loss of finger print reader capability","6","Lack of designed features to protect sensitive components from direct impacts",,"4","Provide protective features such as raised surfaces or ribs designed to prevent sensitive components from direct impacts.
+Verify from CAD modelling/ simulation the compression modulus of selected material is capable of protecting sensitive components.
+Select PSA material with temperature range compatible with product use-case.",,"Operating temperature cycling test.
+Design margin test.
+Drop test.
+IPXX test.",,"3","72","No",,,
+"51","Enclosure","Camera window adhesion failure","qualib392_pic1.png",,"QUAL-LIB-392",,"Loss of camera function","6","Sealing surface not texturing not compatible for PSA application i.e., not flat and smooth.
+PSA rating not compatible with product operating temperature range.",,"4","Specify surface requirements for effective PSA attachments i.e. texture, smooth surface. 
+Process control for PSA attachment using fixtures for consistent pressure and duration.",,"Vibration test.
+Drop test across temperature.
+Tumble test.",,"3","72","Yes",,,
+"53","Enclosure","Poor sealing surface design","qualib394_pic1.png",,"QUAL-LIB-394",,"Loss of function due to water or dust ingress","6","Mating surface is not flat and smooth due to surface texturing, ultrasonic welding, ejector marks or parting lines.",,"4","Specify requirement for sealing mating surfaces to be flat and smooth.
+Tool ejector pin location and molding gates are not on sealing surfaces.",,"Thermal shock followed by IPXX test.",,"3","72","No",,,
+"54","Enclosure","Scan exit window detaching","qualib395_pic1.png",,"QUAL-LIB-395",,"Loss of barcode scanning capability","8","Mating surface design not compatible with ultrasonic welding process i.e. size of energy director.",,"4","Design mating surface and energy director that is compatible with ultrasonic welding process.",,"Verify scan window push out force meet specified requirement.
+Drop test.
+Tumble test.
+IPXX test.",,"3","96","No",,,
+"55","Enclosure","Paint peeling and bubbling on plastic surface","qualib396_pic1.png",,"QUAL-LIB-396",,"Degraded appearance","4","Material selection not compatible with customer use-case",,"4","Select compatible designs with the use-case such as In Mold Decoration (IMD).",,"Tests for outdoor use such Solar Radiation, Chemical Resistance test and Abrasion test.",,"3","48","No",,,
+"58","Enclosure","Gun handle over-mold peeling from the substrate plastic","qualib416_pic1.png",,"QUAL-LIB-416","SPR 16251","Terminal is unstable to hold","4","Overmold material on handle is too soft and absorbs hand oils causing it to lose adhesion to the substrate
+plastic over time. ",,"4","Specify over-mold material with higher shore durometer e.g. 90 shore on high touch surfaces.
+Add features in the design of the substrate such as ribs or slots to increase surface contact area. ",,"Perform over-mold adhesion testing as outlined in 00-M911-TP08 test procedure.",,"3","48","No","https://spr.zebra.com/ViewSPR.aspx?sprID=16251",,
+"59","Enclosure","IP6X test failure",,,"QUAL-LIB-526","SPR 34983","Failure to operate","8","Flex used for sealing between outside environment contained through holes due to a cost reduction effort (removal of component
+but no change to flex)","eb237368-9fac-4900-a038-7ee9af79abe3.png","4","Flexes should not be used to create an IP seal for a device. Use suitable seal design e.g. PSA or rubber seal.
+
+",,"IPXX test",,"3","96","No","https://spr.zebra.com/ViewSPR.aspx?sprID=34983",,
+"60","Display","Mura appearing on display when touch panel is activated.","qualib596_pic1.png","qualib596_pic2.png","QUAL-LIB-596","SPR 37804","Appearance of localized distortion on display","4","Pressure induced to the back of Display when Touch Panel is activated due to lack of clearance between the Display and underlying components causing interference.","dfd399d2-1434-4ef8-a11f-67a5e9fb4656.png","4","Provide sufficient clearance between the back of display and underlying components.    Less rigid display
+components will need higher clearance to accommodate tendency to bend when Touch Panel is activated.",,"Include display mura symptom in the list of check items during Engineering and Qualification testing.",,"4","64","No","https://spr.zebra.com/ViewSPR.aspx?sprID=37804",,
+"61","Display","Display showing random lines on screen","qualib411_pic1.png",,"QUAL-LIB-411
+",,"Distorted image on display","4","Lack of supporting features on display integration allowing for movement during impact resulting to damage on Display FPC.",,"4","Provide fillers e.g. foam pad to fill up void area between FPC bend area and edge of Display to restrict movement during impact.",,"Teardown inspection on test samples following Drop tests",,"3","48","No",,,
+"62","Display","Light leakage on Display ","qualib412_pic1.png",,"QUAL-LIB-412",,"Localized discoloration on display","3","Peeling off of LED light bar from Back Light Unit (BLU) frame allowing for light to leak out.",,"4","Select adhesive material that can effectively perform at extreme temp.",,"High temperature Burn-in
+Drop Test
+Tumble Test",,"4","48","No",,,
+"63","Display","Light leakage on display ","qualib415_pic1.png",,"QUAL-LIB-415",,"Localized discoloration on display","3","Excessive pressure being applied to the backlight in display integration stack-up design.",,"4","Minimize compression to the backlight in the display integration
+ - LCD rubber boot
+ - EMI spring position and force",,"Tolerance Analysis on display stackup to check for possible interference and verify equal compression around entire perimeter.
+
+Manufacturing test under various display color backgrounds.",,"4","48","No",,,
+"65","Display","Ripples on display","qualib417_pic1.png",,"QUAL-LIB-417",,"Appearance of localized distortion on display","4","Deformation of the backlight diffuser film due to lack of sufficient anchor points resulting to the locating anchors to deform during mechanical tests",,"4","Design for sufficient anchor points to support the backlight diffuser film from folding during mechanical tests. ","qualib417_pic2.png","Drop Test
+Tumble Test",,"4","64","No",,,
+"66","Display","Display not working","qualib418_pic1.png",,"QUAL-LIB-418",,"Unable to operate device","8","Crack on FPC display due to abrupt change in thickness causing sharp bend radius and high strain on FPC conductors.",,"4","Design guidelines on FPC around bend areas
+1) FPC's identified as dynamic shall specify conductor material as 1mil Rolled Annealed Copper (RA-Cu).
+2) Transitions in trace direction shall be placed outside of bend areas and away from areas where the width of the FPC changes.
+3) FPC thickness transitions shall not occur within the bend region and shall not be in the same location as the FPC width transition.
+4)  Hard stiffener e.g. stainless shall not occur parallel to the same location as the FPC trace.
+5) There should be no via holes (PTH) present within the bend region of the FPC.",,"Drop and Tumble tests",,"3","96","No",,,
+"68","Keypad","Intermittent keys","qualib431_pic1.png",,"QUAL-LIB-431",,"Keys may or may not work when pressed.","6","Keypad metal dome switch cutting into buried trace under the dome.",,"4","Review of keypad trace layout against dome array.
+",,"Keypad actuation life test and teardown inspection focusing on keys directly above traces.",,"3","72","No",,,
+"69","Keypad","Intermittent Keys","qualib433_pic1.png",,"QUAL-LIB-433",,"Keys may or may not work when pressed.","6","Metal dome switch obstructed by thickness of solder mask on PCB.",,"4","Review keypad trace layout and clearance against dome array.",,"Keypad actuation life test
+Actuation force measurement on multiple keys",,"3","72","No",,,
+"70","Keypad","Keypad connector breaking off from PCB","qualib434_pic1.png",,"QUAL-LIB-434",,"Keypad not functioning","6","Lack of mechanical support on connector.
+",,"4","Select connector with through-hole mechanical support.
+Add reinforcement such as epoxy for mechanical support.",,"Drop test
+Tumble test",,"3","72","Yes",,,
+"71","Keypad","Keypad connector breaking off from PCB","qualib434_pic1.png",,"QUAL-LIB-434",,"Keypad not functioning.","6","Poor solder joint due to limited pad size.",,"5","Optimize PCB solder pad size for proper solder joint formation.",,"Drop test
+Tumble test",,"3","90","No",,,
+"72","Keypad","Poor tactile feedback on keys.","qualib435_pic1.png",,"QUAL-LIB-495","SPR 19799
+SPR 19800","Difficult to activate keys","4","Poor keypad mold and acoustic seal design.",,"4","Mold design and pin insert must be in perfect alignment.
+Design must provide for proper seal components to fit for adjacent keys to operate.
+No parting lines on critical surfaces.
+Keypad membrane spec should call out for proper trimming requirements.",,"First Article Inspection on samples from every cavity to confirm compliance with design requirements.
+Final test in MFG should include audio quality and echo testing.
+Teardown inspection after Drops, Tumble, AFM to confirm no movement in placement of seal components.
+Check for tactile feel of all adjacent keys to mic hole.
+",,"5","80","No",,,
+"73","Keypad","Key does not work when activated.","qualib436_pic1.png",,"QUAL-LIB-436",,"Unable to operate specific keys on keypad","6","Keypad dome single dimple contact design.
+Single dimple design can be susceptible to small particle interference such as skin particles.",,"4","Select keypad dome with multiple dimple design.
+Specify key actuation force and travel distance.",,"Verify dome design and height/spacing contact point during Engineering test.
+Confirm actuation and contact points with pressure sensitive paper.
+Measure key actuation force and travel distance.",,"4","96","No",,,
+"74","Keypad","Keys or button getting stuck","qualib437_pic1.png",,"QUAL-LIB-437",,"Unable to operate key or button.","6","Poor mold design.  Parting line interferes with key or trigger button.",,"4","Location of mold parting line should be carefully chosen not to interfere with key or trigger button movement.
+Design tool such that parting line for key or trigger button recesses occur at the bottom of recess and not at the top or middle section.
+Specify maximum allowable parting line in the drawing.",,"Key actuation life test.
+Verify tool design for parting line location for key or trigger button recesses.",,"4","96","No",,,
+"75","Switch","Broken solder joints","qualib439_pic1.png",,"QUAL-LIB-439","SPR 30912","Unable to operate switch resulting to function loss.","6","Lack of mechanical support to withstand lateral forces",,"4","Select switch designs with mechanical PCB through hole support or add supporting mechanical features.
+Specified minimum actuation life to be no lower than 1M cycle.
+ ","qualib439_pic2.png","Switch or Button actuation life test.
+Perform actuation life test with applied force 1.5x the specified actuation force.",,"4","96","No",,,
+"76","Switch","Power button takes excessive force to depress","qualib580_pic1.png",,"QUAL-LIB-580","SPR 33931
+SPR 34891
+","Terminal does not power on or off or is very difficult to power on or off","8","Power button flex dome shifted such that no electric contact is made between the dome center and the plated gold area on the flex.
+Flex is floating design but no sufficient surface area for Mylar adhesive to bond to the substrate.
+Tolerance stack up.",,"4","Fixed mount dome designs should be chosen over floating dome designs when possible.
+The dome-retaining Mylar must have enough surface around the dome to avoid Mylar to lift over time- refer to the dome switch design guidelines for surface area.
+Avoid any steps under the Mylar and dome layer which can result in lift.
+Any external plunger for power button activation must be fully aligned with center of terminal power button and switch.",,"Switch actuation life test.",,"3","96","No",,,
+"77","Trigger","Side trigger actuator post wearing through rubber","qualib597_pic1.png",,"QUAL-LIB-597","SPR 37082
+SPR 37593","Unable to activate scan button.","8","Button post design allow for premature wear out of rubber pill resulting to puncture over time.
+",,"4","Button post should be designed for a distributed actuation force load instead of point load.
+Actuation life to be specified according to customer use case.
+
+","qualib597_pic2.png","Button actuation life test.
+Teardown inspection.
+",,"3","96","No","https://spr.zebra.com/ViewSPR.aspx?sprID=37082",,
+"78","Switch","Premature button failure in freezer environment","qualib617_pic1.png",,"QUAL-LIB-617","SPR 37052
+SPR 36324","Unable to activate button resulting to function loss.","6","Button does not withstand 1 million actuations at cold because the button gold plating wears away.
+Gold plating wears away because debris is allowed to enter between the button plunger and the gold plating.
+Debris enters because the enter key membrane tears.
+The enter key membrane tears due to the abrasive action of frozen environmental moisture.",,"4","Actuation life specification must match customer use-case.
+Material selection e.g. silicon membrane temperature rating must match the target operating temperature.
+",,"Actuation life test.
+Teardown inspection.",,"4","96","No",,,
+"79","Acoustics and Audio","Poor acoustics performance","qualib440_pic1.png",,"QUAL-LIB-440",,"MIC not working","4","Acoustic seal interference with adjacent key.",,"4","Mold design and pin insert must be in perfect alignment.
+Design must provide for proper seal components to fit for adjacent keys to operate.
+No parting lines on critical surfaces.
+Keypad membrane spec should call out for proper trimming requirements.",,"First Article Inspection on samples from every cavity to confirm compliance with design requirements.
+Final test in MFG should include audio quality and echo testing.
+Teardown inspection after Drops, Tumble, AFM to confirm no movement in placement of seal components.
+Check for tactile feel of all adjacent keys to mic hole.",,"5","80","No",,,
+"80","Acoustics and Audio","Speaker not working","qualib441_pic1.png",,"QUAL-LIB-441",,"No audio output from Speaker","6","Coil wire fatigue",,"4","Design to meet requirements of MAX drive level receiver test 00-MA71-TPR01.
+Design to meet requirements of MAX drive level speaker test 00-MA71-TPS01.
+Design to meet requirements of Speaker Stress test. 
+",,"Submit samples for Build-As-Designed analysis 00-MA71-BAD01.",,"4","96","No",,,
+"81","Acoustics and Audio","Receiver not working","qualib442_pic1.png",,"QUAL-LIB-442",,"Poor signal reception","6","Coil wire fatigue",,"4","Design to meet requirements of MAX drive level receiver test 00-MA71-TPR01.
+Design to meet requirements of MAX drive level speaker test 00-MA71-TPS01.
+Design to meet requirements of Speaker Stress test.",,"Submit samples for Build-As-Designed analysis 00-MA71-BAD01.",,"4","96","No",,,
+"82","Acoustics and Audio","Variation in Receiver volume and audio quality","qualib505_pic1.png",,"QUAL-LIB-505","SPR 27794","Low volume level and low tone","5","The pressure outside and inside of the device is not able to equalize affecting the audio performance when SD card door is inserted to Terminal.",,"4","Provision of an actual vent hole in the design of products with with voice communication feature while maintaining IP Seal requirements.
+Acoustic chamber must be immune from effects of pressurize enclosure such as SD covers, Seal covers, Battery, Labels, etc.
+Enclosure pressure must be equalized if audio components are used and device supports voice applications.
+",,"Perform acoustic test measurements in production on complete units with all seals in place, SD card door, battery, Labels, etc.
+Verify torque setting on screw assembly for audio components.",,"6","120","Yes","https://spr.zebra.com/ViewSPR.aspx?sprID=27794",,
+"83","Acoustics and Audio","ECL test failure","qualib609_pic1.png",,"QUAL-LIB-609","JIRA Acoustics-316","Poor audio quality and IP seal compromised","6","Assembly stack-up and required compression to provide IP seal causing wrinkles on the membrane.",,"4","Design should incorporate stack-up and compression to provide sealing and not compromise membrane flatness.
+Membrane material selection should consider sealing requirements and assembly stack design intent.
+Acoustic chamber boot design should be repeatable and reproducible for assembly in MFG.","qualib609_pic2.png","Engineering test on acoustic test limits",,"4","96","No",,"Acoustics-316","https://jira.zebra.com/browse/ACOUSTICS-316"
+"85","Power","Broken Power Connector","qualib449_pic1.png",,"QUAL-LIB-449",,"Unable to power up terminal","8","Insufficient connector mechanical support",,"4","Add mechanical anchor re-inforcement on connectors",,"Bend test with cable attached to terminal",,"3","96","No",,,
+"86","USB","Not charging through USB port","qualib615_pic1.png",,"QUAL-LIB-615",,"Loss of USB function","6","USB connector solder joint cracked on impact during drop test.  Small material thickness of IO dongle could be susceptible to cracking on impact shock.  
+Alignment features not sufficient to prevent movement of PCB and material thickness not adequate to prevent damage on impact.","qualib615_pic2.png","4","Mechanical design around the USB connector should have adequate alignment features to prevent movement and avoid collision with housing or other mechanical parts.
+
+The material thickness at the critical drop points should be as thick as possible and the radius as large as possible.  Recommended thickness of housing is over 0.8mm and radius larger than 0.5mm.
+
+Add requirements for Melt Flow Index (MFI) on 2D drawing.","qualib615_pic3.png","Drop Test
+Tumble test
+MFI test at supplier
+Break force test at supplier",,"3","72","No",,,
+"87","Battery and Interconnect","Solder fracture and/or Pad Cratering at blade connector to PCB solder joint","qualib602_pic1.png",,"QUAL-LIB-602",,"Failure to operate","8","Design allowed too much movement between the battery and device.
+The connector blades move with the battery separate from the rest of the device.
+Stress is transferred to the solder joints connecting to the board.
+Solder joint may not be sufficiently strong to withstand level of stress and should not be used as the only mechanical strengthening element.",,"4","Movement of battery relative to device during stress should be eliminated to minimized.
+Strengthen the means of fixing the connector to the board to withstand additional stresses e.g. clips, retaining structure, pin-through-hole, etc.
+Identify Critical-to-Quality (CTQ) parts or assembly aspects of the design.",,"Drop test
+Tumble test
+mini-AFM (test above spec)
+Ensure CPK of greater than 1.6 for critical dimensions on battery and related battery compartment features.",,"3","96","No",,"ME-7455","https://jira.zebra.com/browse/ME-7455"
+"88","Connectors and Flex Plating","LCD connector cracking at the sides","qualib474_pic1.png",,"QUAL-LIB-474",,"Display not working","8","Material is brittle.  The high glass fiber content to wall thickness ratio around the walls and sharp corners could make the connector susceptible to cracking based on flex constraints caused by LCD frame.",,"4","Material selection.  Choose connector with less brittle material.
+Verify material temperature limits.
+Design around connector to off-load stresses by ensuring that flex radii is adequate to minimize lateral movement during drops.",,"Drop test
+Tumble test
+Design margin test (above spec testing)",,"3","96","No",,,
+"89","Connectors and Flex Plating","Galvanic Corrosion, Anodic, Cathodic Corrosion","qualib475_pic1.png",,"QUAL-LIB-475","SPR 17378","Device goes to suspend when pressed in specific location","7","Use of dis-similar metals in the design of mating parts.",,"4","Select similar connector and mating flex plated surfaces (refer to MIL-STD-889 guidelines).  Tin flex use only Tin plated mating connector contact leads.  Gold flex use only gold pated mating connector leads. Gold is the preferred plating surface.
+Maintain design guidelines to ensure basis for avoiding galvanic corrosion.
+Do not allow one supplier control the flex and a different supplier control the connector.
+Maintain BOM compliance to ensure multiple sourcing error does not occur.
+",,"Thermal Shock
+High Temperature and Humidity test
+Teardown inspection following test exposure focusing on mating surfaces
+First Article Inspection to confirm compliance to plating requirements",,"3","84","No","https://spr.zebra.com/ViewSPR.aspx?sprID=17378",,
+"90","Connectors and Flex Plating","Corrosion on Contact between Keypad Flex Gold Contact and Pogo Pin Connector","qualib476_pic1.png",,"QUAL-LIB-476",,"Intermittent connection resulting to intermittent operation of keypad","6","Insufficient plating thickness.
+Base copper type.",,"4","Design contacts on Flex with hard gold plating at 40 +/- 10 micro inches, Electrolytic plated finish, Gold over Nickel.
+
+Design layout that will support Electrolytic plating.
+
+Design pogo pin contacts with hard and thick gold plating at 40 +/- 10 micro inches, Gold over Nickel, Nickel at 180 +/- 60 micro inches
+
+Use thin adhesive with sufficient backing stiffener to prevent Flex contact force from denting when pogo pins apply force on pads.",,"Life cycle test.
+Teardown inspection.",,"4","96","No",,,
+"91","Connectors and Flex Plating","Sub miniature version A (SMA) connector premature failure after 20 mating/un-mating cycles","qualib478_pic1.png",,"QUAL-LIB-478",,"Unable to transmit or receive RF signals.","7","Requirement for the external antenna connector mating cycles not explicitly defined in part specs.",,"4","Life cycle requirement for Mating and Un-mating cycles of external antenna connectors must be explicitly defined in part drawing.",,"Antenna mating and un-mating life cycle test.",,"3","84","No",,,
+"92","Battery and Interconnect","54% Battery Charge Level Error","qualib588_pic1.png",,"QUAL-LIB-588",,"Battery not charging. LED's indicate battery not charging and may require battery removal and re-insertion to recover.","6","Fretting corrosion on battery connector resulting from,
+- vibration induced wear on both contact surfaces
+- high relative movement of battery within the terminal resulting in excessive abrasion
+- base material is exposed then oxidation takes place causing increased contact resistance","qualib588_pic2.png","4","Plating specifications should be in compliance to Zebra Plating Standards and Guidelines.
+Perform simulation studies to evaluate relative motion/ possible wear between contact surfaces.
+Reduce free movement of battery relative to the Terminal.",,"Vibration Test
+Oak Box Test
+Teardown inspection of contact surfaces",,"3","72","No",,,
+"93","Connectors and Flex Plating","Scan engine not working","qualib589_pic1.png",,"QUAL-LIB-589","SPR 35334
+SPR 36380","Unable to read barcode","8","Connector lock-bar position is too close to back housing resulting to collision during impact shock causing the lock-bar to unlock.
+Use of Kapton tape as reinforcement for the lock-bar which is not reliable due to effects of temperature on tape adhesion.","68d178ac-d47f-491e-b10a-963a31cd47df.png","4","Increase distance between components that could collide during impact shock or add features such as radiuses to allow for maximum gap. ",,"Drop Test
+Tumble Test
+Teardown Inspection",,"3","96","No","https://spr.zebra.com/ViewSPR.aspx?sprID=35334",,
+"94","Connectors and Flex Plating","Free hanging ferrite causes flex to disconnect","qualib591_pic1.png",,"QUAL-LIB-591","SPR 35281","Loss of ethernet function","7","Ethernet flex connecting the main board and 4-slot board either becomes disconnected or damaged due to relative movement between the ferrite and the PCB which is caused by the ferrite not being secured.",,"4","Design should not allow for any unsupported mass or suspended from an electrical flex.",,"Drop Test
+Vibration Test",,"3","84","No","https://spr.zebra.com/ViewSPR.aspx?sprID=35281",,
+"95","Connectors and Flex Plating","Cracks on FPC traces","qualib594_pic1.png",,"QUAL-LIB-594","SPR 37298","Scan engine not working, unable to read barcode","8","Excessive stress on FPC traces during 180 degree bend installation.",,"4","Design should avoid excessive bend angle during installation.
+Recommended FPC trace width should be over 0.1mm.",,"Drop Test
+Tumble Test
+X-ray inspection of FPC traces checking for micro cracks",,"3","96","No","https://spr.zebra.com/ViewSPR.aspx?sprID=37298",,
+"96","Connectors and Flex Plating","Vertical locking flex connector opens up during mechanical stresses","qualib599_pic1.png",,"QUAL-LIB-599",,"Scan engine not working, unable to read barcode","8","Vertical locking connector is unable to withstand mechanical stresses e.g. Drops, Tumbles moving to unlock position.
+Application of tape including double tape as reinforcement is insufficient to prevent connector from being unlocked.",,"4","Select connector with spring loaded latch i.e. automatically springs back to the lock position e.g. Kyocera 6810 series with ""one-Touch Locking"" feature.","qualib599_pic2.png","Drop Test
+Tumble Test
+Teardown Inspection
+X-ray Inspection of Flex connector position",,"3","96","No",,"ME-6538
+ME-6543",
+"97","Camera and Proximity Sensor","Camera stack height shortened after Thermal Shock","qualib480_pic1.png",,"QUAL-LIB-480",,"Camera auto-focus failure","6","Incorrect foam pad material selection",,"4","Ensure material properties of foam pad can sustain effects of Thermal Shock and terminal operating temperature range. 
+Tolerance analysis should consider percentage of material shrinkage, percentage of compression, PCB/connector location/height against the exit window.",,"Thermal Shock
+Operating Temperature Cycling",,"4","96","No",,,
+"98","Camera and Proximity Sensor","Camera flex connector disconnected during Drop test","qualib481_pic1.png",,"QUAL-LIB-481",,"Camera inoperative","6","Camera assembly design induced pull force on connector during drops.",,"4","Design should ensure Flex material, thickness, shielding does not tug on Camera stack.
+Foam/material with Flex design should be able to maintain compression over temperature.
+Confirm bend or forming of flex before and after assembly.
+Tolerance analysis should include PCB/connector location/height vs exit window and no interference/pressure on flex during Drops or Tumble.",,"Drop Test
+Tumble Test
+Teardown Inspection
+X-Ray inspection ",,"4","96","No",,,
+"99","Camera and Proximity Sensor","Crosstalk between LED and Receiver","qualib534_pic1.png",,"QUAL-LIB-534",,"Loss of proximity sensor function","6","Material used for Rubber Boot and Baffle caused a lift in the Touch Panel resulting to light leakage to the sensor.",,"4","Design should ensure adequate isolation between LED and Receiver.
+Material selected for Rubber Boot should be able to provide adequate compression and not excess outward force.
+Conduct simulation study for crosstalk.",,"Thermal Shock
+Altitude Test to verify effect of change in pressure
+Cpk analysis on P-sensor activation distance",,"4","96","No",,,
+"100","Wi-Fi","WLAN antenna breaking off during Drops","qualib482_pic1.png",,"QUAL-LIB-482",,"Loss of WLAN function","7","Insufficient anchoring of WLAN antenna",,"4","Design should provide for adequate anchoring such as more than 1 holding screw and optimized solder pad size for to facilitate good solder joint.
+Design should account for possible interference during impact shock.",,"Drop Test
+Tumble Test
+Teardown Inspection",,"3","84","No",,,
+"101","GPS","GPS Antenna breaking off during Drops","qualib482_pic1.png",,"QUAL-LIB-482",,"Loss of GPS function","7","Insufficient anchoring of WLAN antenna",,"4","Design should provide for adequate anchoring such as more than 1 holding screw and optimized solder pad size for to facilitate good solder joint.
+Design should account for possible interference during impact shock.",,"Drop Test
+Tumble Test
+Teardown Inspection",,"3","84","No",,,
+"102","Ultrasonic Welding","Ultrasonic welding mating surface failure causing top cover to detach","qualib536_pic1.png",,"QUAL-LIB-536","SPR 32837","Loss of function due to damage internal components when exposed","8","Plastic housing design and assembly design did not provide for adequate room to accommodate wiring assembly resulting to constant force load against ultrasonic welding surfaces.",,"4","Perform tolerance analysis on the assembly stack-up to ensure no interference between assembly component that could result to a constant pressure against ultrasonic welding surfaces.
+
+Include use of pressure sensitive paper during ultrasonic welding job setup to verify parallelism between horn, fixture and component ensuring even amount of pressure along the mating surface. ","qualib536_pic2.png","Drop Test
+Tumble Test
+Teardown inspection of ultrasonic welding mating surfaces",,"3","96","Yes",,,
+"103","VHB, Fasteners and Adhesives","Screw fastener head breaking off during mechanical stress","qualib583_pic1.png",,"QUAL-LIB-583",,"Screw loosening compromising structural integrity of product","7","Material selection of screw fastener requiring Zn plating process are susceptible to Hydrogen Embrittlement (HE) of screws which typically occurs as a result of the required acid bath for Zn electroplating. 
+""Rock Candy"" morphology with characteristic ""crow's feet"" indicate inter-granular failure caused by HE.
+","qualib583_pic2.png","4","Design should consider use of Stainless Steel screws instead of Zn plated (or any other plating e.g. Ni) to eliminate the need for acid bath required in electroplating process.
+Consult galvanic series table to assess material compatibility.","qualib583_pic3.png","Drop Test
+Tumble Test 
+Teardown inspection checking for fractures on screws and other mechanical components.
+In case of electro-plated screws, audit of supplier to verify post-plate baking is a controlled process (specifically time between plating and bake, temp., time of bake) and QC testing using ASTM F519",,"3","84","Yes",,,
+"104","VHB, Fasteners and Adhesives","Touch Panel Assembly popping out during Drop test","qualib485_pic1.png",,"QUAL-LIB-485",,"Failure to operate","8","Contamination from VHB tape release liner reduced tape adhesion by 50%.
+Double-sided Tape (DST) part drawing did not specify adhesive performance requirement for Peel Strength.","qualib485_pic2.png","4","Specify DST adhesion requirement on part drawing.
+Define process control for VHB application i.e., assembly fixture, pressure and duration.
+Compliance to Process Change Notification (PCN) requirements.",,"Perform peel strength measurement post Thermal Shock following ASTM3330.
+Drop test across temperature
+Tumble Test",,"3","96","No",,,
+"105","VHB, Fasteners and Adhesives","Speaker Grill detaching during cold drops","qualib618_pic1.png",,"QUAL-LIB-618","SPR 39312","Distorted audio. Structural integrity compromised.","7","Mating surfaces are smooth which does not make good contact surface for adhesive.
+Tolerance analysis indicating assembly stack-up e.g. housing flatness, grill flatness and press head flatness is larger than the adhesive thickness.
+Flatness requirement not defined on plastic housing and grill.","qualib618_pic2.png","4","Design should avoid using adhesive on cosmetic area and bonding between different components solely relying on adhesive.  Design should incorporate specific features to ensure a stronger bond.
+
+In cases where adhesives cannot be avoided,
+Design should add mechanical features as reinforcement.
+Design should define the flatness of related components and run tolerance analysis to ensure the adhesive can be fully bonded.
+
+Process Controls for adhesive bonding,
+Flatness of the press fixture should be considered.
+Conduct pressure sensitive paper test at job setup to ensure fixture press head is operating properly.
+Regular check on press head fixture for signs of wear out.
+Clean mating surfaces either by plasma or IPA.
+","qualib618_pic3.png","Drop Test across temperature
+Tumble Test
+Teardown inspection on mating surfaces bonded with adhesive",,"3","84","Yes",,,
+"106","Soft Goods, Straps and Stylus","Hand Strap stitching coming loose","qualib486_pic1.png",,"QUAL-LIB-486","SPR 20171","Unstable grip on terminal.","4","Stitching is minimal and is constantly abraded when terminal is placed flat on back.",,"4","Hand strap stitching should be designed with double box stitching pattern.
+Avoid placing hand strap stitching on area that will constantly be in contact with abrasive surfaces.","qualib486_pic2.png","Conduct cardboard abrasion test.",,"3","48","No",,,
+"107","Soft Goods, Straps and Stylus","Hand Strap binds when terminal is inserted into charge cradle","qualib487_pic1.png",,"QUAL-LIB-487","SPR 19486
+SPR 19040
+SPR 11660","User inconvenience","4","Physical interference between the hand strap and the charge cradle.",,"4","All accessories must be checked for cross compatibility.  
+The checking process would be facilitated if there is an existing comprehensive list of accessories and its corresponding design maturity.",,"Insertion testing on all cradles while integral accessories e.g. hand strap, tether, stylus are installed on the terminal.",,"3","48","No",,,
+"108","Health Care","Housings are cracking in Healthcare environment","QUAL-LIB-496FM.PNG",,"QUAL-LIB-496","SPR 22057
+SPR 28531
+","Decrease/ loss of housing protection","6","Over-molding can result in tensile strains which make the material more susceptible to chemical attack.","QUAL-LIB-496RC1.PNG","4","Avoid designs requiring over-molding and two shot molding processes for Healthcare products.",,"Thermal Shock
+Chemical Resistance Test
+Drop Test
+Tumble Test
+Process Sign Off (PSO) by supply chain SDE check ensure the plastic molded parts are being made correctly, material dried correctly,
+process controls in place at supplier.
+",,"3","72","Yes",,,
+"109","Health Care","Housings are cracking in Healthcare environment","QUAL-LIB-496FM.PNG",,"QUAL-LIB-496","SPR 22057
+SPR 28531","Decrease/ loss of housing protection","6","Placement of fastening screws typically in the corners result to housing distortion during assembly causing significant tensile strain.","QUAL-LIB-496 RC2.PNG","4","Designs should space the assembly screws such that the unit uniformly compresses the seal without distorting the
+housing.
+",,"Thermal Shock
+Chemical Resistance test
+Drop Test
+Tumble Test",,"3","72","No",,,
+"110","Health Care","Housings are cracking in Healthcare environment","QUAL-LIB-496FM.PNG",,"QUAL-LIB-496 ","SPR 22057
+SPR 28531","Decrease/ loss of housing protection","6","Use of Lexan 9330 which does not have good chemical resistance.  Cleaning agents used in the medical industry such as Vionexous and Virex are known to degrade the strength of plastics.
+",,"4","Select plastic material that are resistant to cleaning agents used in health case environment.",,"Thermal Shock
+Chemical Resistance Test",,"3","72","No",,,
+"111","Health Care","Rubber bumpers coming off Aluminum housing
+","QUAL-LIB-498FM.PNG",,"QUAL-LIB-498","SPR 26655","Decrease/ loss of rubber bumpers protection","6","Aggressive disinfectant chemical cleaners compromised the  acrylic based PSA used to adhere bumper to aluminum
+housing.
+",,"4","Do not use acrylic based adhesives for applications which require disinfectant cleaning. These applications require silicone based adhesives which can withstand rigorous cleaning found in Health Care environments.",,"Thermal Shock
+Chemical Resistance Test
+",,"3","72","No",,,
+"112","Health Care","Resilience HC8230 warps at typical storage temperature & exposure to UV radiation",,,"QUAL-LIB-499",,"Degradation / loss of housing protection","6","Resilience HC8230 deflection temperature under load is 69.4°C which is relatively low.  Internal stresses relax and result in warpage. Zebra Internal testing (High Temp. Storage & UV Sunlight Exposure) revealed dimensional changes after exposure rendering the samples not usable.",,"4","Consider using Polyvinyl chloride alloy alternatives. Geon HTX M6215 extends heat distortion temperature above standard PVC (77.8°C vs 69.4°C) and has excellent low temperature impact performance.",,"Thermal Shock
+Chemical Resistance Test
+Storage Temperature Test
+Solar Radiation Test
+",,"3","72","No",,,
+"113","Health Care","Corrosion on electrical contacts when exposed to bleach based disinfectants
+","QUAL-LIB-500FM.PNG",,"QUAL-LIB-500",,"Function loss due to degradation in conductivity of electrical contacts","7","Corrosive nature of bleach based disinfectants.",,"4","Apply gold plating post stamping/ bending process to guarantee sufficient and consistent plating thickness and prevent any base material exposure which could result to corrosion.
+Use disinfectant resistant epoxy coating/painting on exposed metal surfaces. Do not use any acrylic based paint or coatings.
+",,"Thermal Shock
+Chemical Resistance test
+",,"3","84","No",,,
+"114","Health Care","Plastic boss on battery pack housing holding the magnet is cracking","QUAL-LIB-584FM1.PNG","QUAL-LIB-584FM2.PNG","QUAL-LIB-584","SPR 30371","Plastic boss cannot hold magnet resulting to battery unable to be secured to terminal.","6","Magnet geometry interferes with the plastic boss dimension resulting to high stress concentration and makes the material more susceptible to effects of chemical attack.",,"4","Avoid interference in design. Conduct tolerance analysis of areas designed to be in a state of constant stress which can result in plastic cracking.
+Minimize reveals and features in the design which can trap environmental substances that can adversely affect plastic components over time.",,"Thermal Shock
+Enhanced chemical resistance test on battery standalone units including wipe test.",,"4","96","No",,,
+"116","Health Care"," Inaudible user calls","QUAL-LIB-585FM.PNG",,"QUAL-LIB-585","SPR 34296","Unable to communicate with other users","8","Medical use requires frequent disinfection of devices with antiseptics that attack plastics and adhesives. Dust and debris, makeup particles and skin flakes get washed into a slurry that is then forced into the grill holes resulting to degradation of audio performance.",,"4","Designs for medical applications must use materials resistant to chemical attack such as PPSU plastics rather than PET or Polycarbonate. 
+The design of audio holes should consider minimizing of clogging and add features to facilitate cleaning. 
+
+",,"Thermal Shock
+Chemical Resistance Test 
+Dust Ingress Test
+Clogging test developed from SPR 34296",,"3","96","No",,,
+"117","Health Care"," PPSU power key falling off","QUAL-LIB-586FM.PNG",,"QUAL-LIB-586","SPR 35176","Difficult to activate power button.  Poor tactile feel.","6","Loctite 5055 used to bond the power button cap is not compatible with PPSU material which has high chemical resistance property required in healthcare industry.","QUAL-LIB-586RC.PNG","4","Design should consider use of mechanical retention feature to hold the power button cap instead of adhesive bonding specially with PPSU material. 
+
+Alternative option is Liquid Injection Mold (LIM) process to bond PPSU and rubber. ",,"Thermal Shock
+Chemical Resistance Test
+Pull out force test",,"4","96","No",,,
+"118","Health Care","Main housing cosmetic defect on secondary surface","QUAL-LIB-587FM.PNG",,"QUAL-LIB-587","SPR 34900
+SPR 36059","Poor cosmetic appearance","3","Texturing of VDI-18 on PPSU plastic surface is too light making the surface susceptible to effects of sulfidation of the barrel of the injection molding machine.",,"4","Surface texturing should not be lighter than VDI-30 for PPSU plastic material.
+",,"First Article Inspection.
+Process Sign Off (PSO) at supplier injection molding process for tooling cleaning frequency.",,"6","72","No",,,
+"119","Soft Goods, Straps and Stylus","Stylus tether breaks easily when pulled","qualib488_pic1.png",,"QUAL-LIB-488","SPR 18095","Unable to secure stylus to the terminal","4","Tether has insufficient tensile strength. The method of manufacturing the tether crimp result to weakening of the cord material.  Design of tether using in-elastic loop with elastic mid-region required over-molding process causing the tensile strength to be significantly reduced.",,"4","Pull force spec must be defined in the PRD.  Pull force should be near the maximum pull strength as outlined in safety breakaway guidelines.
+Avoid use of elastic tethers that have inherently lower tensile strength compared to in-elastic tethers.
+Avoid using metal crimp where it could be in close proximity of charge I/O contacts.",,"First Article Inspection to confirm conformance to pull force requirements.",,"4","64","No",,,
+"120","Soft Goods, Straps and Stylus","Soft holster belt clip leather tears at attachment point to holster","qualib489_pic1.png",,"QUAL-LIB-489","SPR 28865","Holster can rotate freely as opposed to being stationary.","6","Tearing of the belt clip attachment to holster.  A rotating belt clip design is used for non-rotating application with stitching applied to restrict rotation.",,"3","Specify the correct component for the target application e.g. non-moving components for stationary applications.
+Part drawing to specify the materials and components to be used in the assembly to prevent suppliers from using alternatives without proper notification to Zebra.  ",,"First article inspection.
+Life cycle testing.",,"3","54","No",,,
+"121","Soft Goods, Straps and Stylus","Nylon finger strap premature wear out","qualib490_pic1.png",,"QUAL-LIB-490","SPR 30584
+SPR 43885","Unable to secure ring scanner to fingers","7","Lack of finger strap material durability required for the target use-case.
+Double loop buckle design for the finger strap resulting to abrasion damage.
+Single stitching on the finger strap velcro not adequate for the target use-case.",,"4","Use of stronger material for rugged use-case e.g. Hypalon or better.
+Use of CAM buckle design instead of belt buckle to minimize abrasion damage to strap.
+Specify double stitching or better on finger strap velcro.
+Define life cycle requirement in PRD.",,"Life cycle testing of finger strap to validate all the components in the finger strap system i.e., Strap material, Buckle, Velcro and Stitching.  Ensure test method is simulating the actual use-case e.g. full insertion, tightening, loosening and removal.",,"3","84","No",,,
+"122","Soft Goods, Straps and Stylus","Rubber finger strap premature wear out","qualib491_pic1.png","qualib491_pic2.png","QUAL-LIB-491","SPR 43885","Unable to secure ring scanners to fingers","7","Bumps on Silicon rubber finger strap design creates stress concentration resulting to weakening of the material leading to cracking and eventual breaking.",,"4","Use of stronger material for rugged use-case e.g. Hypalon or better.
+Use of CAM buckle design instead of belt buckle to minimize abrasion damage to strap.
+Specify double stitching or better on finger strap velcro.
+Define life cycle requirement in PRD.",,"Life cycle testing of finger strap to validate all the components in the finger strap system i.e., Strap material, Buckle, Velcro and Stitching.
+Ensure test method is simulating the actual use-case e.g. full insertion, tightening, loosening and removal.",,"3","84","No","https://jira.zebra.com/browse/SPR-43885",,
+"123","Soft Goods, Straps and Stylus","Soft good holster housing zipper splitting apart","qualib537_pic1.png",,"QUAL-LIB-537","SPR 32715
+SPR 28139","Unable to secure terminal to holster","4","Zipper separates because retention force of zipper pair is not strong enough to withstand force imparted by terminal specially when inserted upside down.  There is no design feature preventing the terminal from being inserted in reverse. ",,"4","Choose the correct zipper size to match the required retention force.  Larger zipper size provides larger retention force. Require zipper # 5 if used on holster housing.
+Provide design features to allow terminal to be inserted only in the correct orientation.
+",,"Insertion life test allowing for insertions to be performed asymmetrically from all possible orientations.",,"4","64","No",,,
+"124","Labels and Regulatory","Labels placed on cable assembly are damaged due to wear location","qualib492_pic1.png","qualib492_pic2.png","QUAL-LIB-492","SPR 28248","Service is unable to recognize serial number and may not honor warranty.","6","Label falling off due to mounting location is at a high wear and contact area of the cable. No provision to place regulatory label on the device or in a low contact point area.",,"4","Design intentional recess area for labels that is low or minimal exposure during normal use.
+Burn-in or print label contents on the part itself.
+Apply protective overlay on label to avoid wearing out of label content.
+Consider features such as wear beads to minimize label exposures.",,"Perform RCA abrasion test on label surface.",,"3","72","No",,,
+"125","Scan Exit Window and Lens","Anti-reflective (AR) coating peeling off exit window","qualib494_pic1.png",,"QUAL-LIB-494",,"Barcode read failure","6","Poor anti reflective (AR) coating adhesion.  Breakdown of AR coating adhesion due to effects of high temperature and pressure during over-molding process resulting to premature wear-off in the field.",,"4","Scan window attachment design should avoid subjecting the window to over-molding process.
+Define AR coating adhesion requirement in part drawing.
+If possible, design application of AR coating on the inner side of the window to avoid physical contact.",,"First article inspection to verify conformance to AR coating adhesion requirements.",,"4","96","No",,,
+"126","Scan Exit Window and Lens","Scan exit window falling off ","qualib495_pic1.png",,"QUAL-LIB-495",,"Damage due to exposed internal components.  Water and dust ingress.","7","Exit window mating surface design not optimized for ultrasonic welding.",,"4","Complete texturing coverage of ultrasonic welding mating surface.
+Design for adequate energy director size for ultrasonic welding process. 
+Ensure horn surface is parallel to the surface being welded during ultrasonic welding.",,"Thermal Shock
+Drop Test 
+Tumble Test
+Exit window push out force test
+Chemical test",,"3","84","Yes",,,
+"127","Scan Exit Window and Lens","Rubber baffle position shifted after drops","qualib538_pic1.png",,"QUAL-LIB-538","JIRA ME-2843","Misaligned or deformed appearance when looking into the scan engine from the scan window.","3","Design of rubber baffle allowed for positional shift due to lack of sufficient rigidity to resist local deflection.
+Flaps designed as anchors made on a single plane resulting to insufficient holding strength.
+Mating surface has irregular fits instead of flat-to-flat mating causing rubber to get caught and not able to bounce back.","qualib538_pic2.png","4","Baffle flange must be design with sufficient rigidity preferably over-molded to plastic to resist defection on impact.
+Mating surface must be flat-to-flat as opposed to irregular fits.
+The anchor points should be on multi-plane instead of single plane and in continuous flow instead of standalone to enhance holding strength.
+Compare simulation results on amount of deflection from reference design.","qualib538_pic3.png","Drop test across temperature on each scan engine configuration
+Tumble test on each scan engine configuration
+Check for baffle position after test exposure
+First Article Inspection checking for flashes that may prevent the baffle from laying flat",,"3","36","No",,,
+"128","Health Care","Housings are cracking in Healthcare environment","qualib497_pic1.png",,"QUAL-LIB-497","SPR 30371","Decrease/ Loss of housing protection","6","Aggressive disinfectant chemical cleaners degrade Poly-carbonate plastics.",,"4","Products in healthcare industry require consideration for resistance to aggressive disinfectants. Use Poly-vinylchloride (rPVC) or Poly-phenylsulhone (PPSU) or other plastic resins developed for cleaning and disinfecting applications.",,"Thermal Shock
+Chemical Resistance test",,"3","72","No",,,
+"129","Vehicle and Cable Adapter","Internal wires of cable are breaking","qualib410_pic1.png",,"QUAL-LIB-410","SPR 28447","Charge cable unable to charge terminals","6","Strain relief design allows for sharp bending at the transition region from the over-mold to bulk cable causing high stress concentration to the internal wires.",,"4","Use a cross-cut pattern in the strain relief design to allow for relaxed bending at all directions.
+Progressive reduce the slot opening size towards the connector end to minimize degree of bending close to the connector.
+If necessary, use Kevlar strains within the bulk cable to wrap the internal wires to increase resistance from breaking.",,"Thermal Shock
+Strain Relief bend test and other applicable test items specified in doc # 70-70984-01.",,"3","72","No",,,
+"130","Vehicle and Cable Adapter","PCB of audio cable breaking when audio connector is plugged-in","qualib409_pic1.png",,"QUAL-LIB-409",,"Loss of audio function","7","Lack of structural mechanical support to prevent the cable housing assembly from bending when audio connector is plugged-in.",,"4","Design adequate structural mechanical support to cable housing assembly to enhance rigidity.","qualib409_pic2.png","Audio cable insertion life test",,"3","84","No",,,
+"131","Vehicle and Cable Adapter","Over-voltage protection circuit failure in host device",,,"QUAL-LIB-445",,"Device failure to operate","8","Missing electrical surge protection test from part specifications.",,"4","Verify purchasing flow down of Charger adapter specification i.e., 86-70979-02.
+Verify supplier test capability is meeting specifications including SAE1145 and ISO7637-02.
+If contracting to external lab, ensure accreditation to ISO17025.
+Verify supplier NRE includes Surge/Electrical compliance test cost per specifications.
+Verify product specifications is based on power supply template document # 00-T612-QTP-01 rev. E or later.",,"Operating temperature cycle test
+Design margin tests
+Surge/ Immunity tests
+Process Sign Off (PSO)
+Burn-in test",,"3","96","No",,,
+"132","Vehicle and Cable Adapter","Vehicle cradle ball and socket joint nut breaks during normal use","qualib522_pic1.png",,"QUAL-LIB-522","SPR 30416
+SPR 27929","Vehicle cradle unable to stay in place when mounted.","6","Mismatch of off-the-shelf tightening nut thread pitch and vehicle cradle thread design.",,"4","Verify design compatibility between off-the-shelf components against Zebra design for interference when components are in proper position and orientation.
+",,"Perform fit/ compatibility checks when incorporating off-the-shelf components.",,"4","96","No",,,
+"133","Vehicle and Cable Adapter","Headset cable internal wires broken","qualib612_pic1.png",,"QUAL-LIB-612","SPR 33282","Intermittent or noisy audio over headset","7","Cable connector design results to repetitive excessive cable bend up to 180 degrees when in normal use.","qualib612_pic2.png","4","Cable connectors should be designed to operate in neutral position instead of being subjected to excessive and perpetual bend.
+Product reference guides should prohibit users from placing devices in pockets where cables could be bent excessively or used as handles to move wearable devices around.",,"Thermal Shock
+Strain Relief bend cycle test",,"3","84","No",,,
+"134","Vehicle and Cable Adapter","Quick disconnect cable intermittent connection","qualib613_pic1.png",,"QUAL-LIB-612","SPR 33282","No audio or intermittent audio over headset","7","Line-to-Line contact design on commercially available connectors.  This minimum contact engagement is susceptible to  premature wear out and eventually results to non-contact.","qualib613_pic2.png","4","Avoid use of commercially available Quick Disconnect (QD) cables for Zebra applications.
+Increase contact engagement on QD by 3mm.","qualib613_pic3.png","Connect/Disconnect life cycle test
+Teardown inspection of mating surfaces",,"3","84","No",,,
+"135","Vehicle and Cable Adapter","Cable breaking at strain relief","qualib614_pic1.png",,"QUAL-LIB-614","SPR 38267","No audio over headset","7","Cable Strain Relief design geometry induce stress concentration on cable bend.
+","qualib614_pic2.png","4","Adopt proven Strain Relief design such as alternating cuts spaced in progression to avoid a concentrated bend point.","qualib614_pic3.png","Thermal Shock test
+Strain Relief bend cycle test over temperature range",,"3","84","No",,,
+"136","Display","Particle visible on display backlight","qualib413_pic1.png",,"QUAL-LIB-413",,"Cosmetic defect on display","4","Lack of support structure on the back of display.
+Double-sided adhesive on backlight frame is not wide enough and adhesive strength is not adequate.",,"4","Design should provide support structure on the corners of the display to minimize movement of the backlight module during drops or tumble.
+Backlight adhesive contact area and adhesive strength should be sufficient to allow the backlight module to withstand impact shock.",,"Thermal Shock
+Drop test across temperature
+Tumble test",,"3","48","No",,,
+"137","Display","Ripples on display when finger pressed","qualib414_pic1.png",,"QUAL-LIB-414",,"Appearance of localized distortion on display","4","Interference points to the back of display module when pressure is applied on the display.",,"4","Design should provide a uniform support structure on the back of display. 
+Components placed underneath the display should have sufficient clearance to prevent interference when pressure is applied on the display during normal use.",,"Add check item for ripples on display when pressure is applied during function testing.",,"3","48","No",,,
+"138","Touch Panel","Touch Panel glass shattering",,,"QUAL-LIB-399","SPR 28541","Unable to operate device","8","TP glass shattering due to cracks initiating from the edges due to chippings i.e., poor edge quality.",,"4","Use alumino-silicate (Corning Gorilla Glass or equivalent) for applications with chemical strengthening.  Alumino-silicate glass can be post processed with Hydroflouric acid etch to improve edge quality.
+Specifications for glass component should include the glass substrate material.",,"Four-point bend testing on glass components
+First Article Inspection with microscope check on the glass edges for presence of chipping.
+Thermal Shock
+Drop Test across temperature
+Tumble Test
+Ball Drop on Touch Panel/ Display",,"3","96","No",,,
+"139","Touch Panel","Touch Panel damaged on the edge area","qualib401_pic1.png",,"QUAL-LIB-401","SPR 25746
+SPR 28424","Touch Panel unresponsive","7","Housing design did not adequately protect the edges of the touch panel","qualib401_pic2.png","4","Design should provide bottom edge protection to housing and keypad bezel and maintain the active area aligned within the  touch panel specification.
+Touch panel design should include venting feature. Vent will allow for pressure equalization between touch panel and atmosphere.",,"Perform touch panel edge wear/ swipe testing.
+Touch Panel durability life test.",,"3","84","No",,,
+"140","Touch Panel","IP leak failure on Touch Panel",,,"QUAL-LIB-403",,"IP seal compromised and could result to potential function loss","6","Touch panel sensor surface does not cover the touch panel outline so it does not match with sealing adhesive area.",,"4","Touch panel design should ensure the outline is covered. Add fake sensor material if required to cover any exposed areas and use resin to fill any gaps.","qualib403_pic1.png","Thermal Shock
+IP Tests",,"3","72","No",,,
+"141","Touch Panel","ESD test failure at 12KV","qualib405_pic1.png",,"QUAL-LIB-405",,"Touch Panel partially operative or permanently damage ","7","Thickness of metal jumper between 8 - 16 microns could get damaged and bridge the glass-glass SITO touch panel configuration.",,"4","Design should ensure minimum thickness of 24 microns on glass-glass SITO (single-sided ITO) touch panel configuration.",,"Thermal Shock + Operating Temperature Cycling + Vibration + ESD",,"3","84","No",,,
+"142","Touch Panel","Puffiness on Touch Panel","qualib408_pic1.png",,"QUAL-LIB-408","SPR 24297","Puffiness increases the stress on the ITO layer and can lead to premature breakdown of the ITO resulting in non-linearity and dead zones.","6","Puffiness caused by the blocking of the vents in the touch panel design.
+Vents can be blocked due to the flow of the adhesive that bonds the layers of the touch panel into the venting areas.",,"4","Design to ensure the vents will not be blocked as a result of adhesive flow. 
+The Display/Touch Panel gasket should be designed to provide relief in the areas of the vent to allow for unrestricted air flow.",,"Thermal Shock
+Operating Temperature Cycling
+Low Temperature Operating Function Test
+High Temperature Operating Function Test",,"3","72","No",,,
+"143","Touch Panel","Distorted image when pressure is applied to Touch Panel","qualib523_pic1.png",,"QUAL-LIB-523",,"Localized distortion on display","4","Inadequate clearance between Touch Panel / Display shield can and mainboard shields causing pressure being applied on back of display resulting to localized distortion.",,"4","1) Perform 1st order approximation (hand calculation) of Touch Panel / Display bending during user activation, approximately 100 grams.
+2) Perform tolerance analysis to determine clearance between display shield and mainboard shield on the worst case stack-up. Clearance should be greater than the first order approximation.
+3) Perform FEA of finalized Touch Panel + Display design to determine maximum applied force to cause interference between display shield can and mainboard shields.  There should be clearance with the shield can even in loaded condition.",,"Perform following test to establish presence or conditions necessary to create LCD distortion from Touch Panel use.  
+
+First determine the location minimum clearance between the shield can of the Display and mainboard.  Apply compression at this location.
+a) Test on Instron machine. Lay sample on a hard flat surface.
+b) Have the plunger push down on the Touch Panel to a given force carefully observing the Display during the pull away for pressure marks.
+c) If no pressure marks observed, increase pressure by 10g increments until distortion is observed.","qualib523_pic2.png","3","48","No",,,
+"144","Touch Panel","Touch Panel is lifting up from plastic housing","qualib524_pic1.png",,"QUAL-LIB-524",,"Sealing compromised around Touch Panel could result to function loss.","6","Incorrect contact angle between the Touch Panel, Double-sided adhesive and Plastic housing.
+Impurities on the bonding surface between Touch Panel and Plastic housing and bonding fixture parameters not optimized.",,"4","Design should establish if the contact angle between mating surfaces is correct.  Dyne Pen test can be used for this purpose. Confirm there is no interference between the mating surfaces e.g. TP sensor film, FPC, etc.
+Ensure cleanliness on the bonding surfaces.  Consider plasma cleaning if needed.
+Ensure bonding parameters i.e., pressure and hold time are optimized. ",,"Thermal Shock
+Drop Test across temperature
+Tumble Test",,"3","72","Yes",,,
+"145","Touch Panel","Touch Panel cracking during AFM test cycle","qualib610_pic1.png",,"QUAL-LIB-610","JIRA ME-7701
+JIRA ME-8355","Possible premature Touch Panel failure in the field rendering the device inoperable","6","Lack of protective bezel or ledge on top housing to protect the Touch Panel / Display assembly.
+Prioritization of ID preference over mechanical design intent.
+",,"4","Design should include protective features such as bezel depth on Top Housing to protect the Touch Panel / Display assembly.",,"mini-AFM test cycle
+AFM test cycle
+Drops across temperature
+Tumble test",,"3","72","No",,,
+"146","Enclosure","Screw boss cracking","qualib390_pic1.png",,"QUAL-LIB-390","SPR 28070","Screw loosening leading to compromised sealing which could result to function loss","6","Cracks due to approved nyseal on screws in boss locations attacking plastics and and exacerbated by the non-optimal ultrasonic insertion process of brass inserts.
+
+Screw nyseal attack on plastics due to unauthorized use of a equivalent version of nyseal by the supplier.",,"4","Part drawing to specify only approved nyseal material is permitted to be used on the screws.
+Perform mold flow analysis and avoid using nyseal on areas with high stress concentration.
+",,"Thermal Shock
+Operating temperature cycling
+Drops across temperature
+Tumble test",,"3","72","0",,,
+"147","PCB Design and Components","Separation of BGA solder joint from solder pad","qualib426_pic1.png",,"QUAL-LIB-426",,"Intermittent operation of device","8","Delamination of BGA from plated PCB finish.",,"4","Ensure compatibility of BGA chemistry with Reflow temperature profile.
+Ensure no mixed chemistry i.e. Pb free process with Pb BGA.
+Ensure plated surface for BGA is Organic Solder Preservative (OSP) and not Electroless Nickel Gold (ENiG).
+Verify selective plating of PCB for Ground Pad, surface contact board-to-board, antenna contact pad or PCB surface EMI contact shield/gasket is not OSP.
+Use underfill or corner bond to provide strength against impact shock and PCB bending.",,"Drop test across temperature
+Design margin testing
+First Article Inspection to confirm PCB plating.  
+Include PCB plating surface test report or C of C in FAI and Process Sign Off (PSO)",,"3","96","Yes",,,
+"148","PCB Design and Components","RF shielding not effective","qualib427_pic1.png",,"QUAL-LIB-427",,"EMI performance not meeting specs","5","Incompatible surface finish for conductive contact or shielding.",,"4","Ensure compatibility of contact elements (EMI gasket, Metal Ground, Board-to-Board contact).
+Ensure no dis-similar metal to metal contact to avoid galvanic corrosion.
+Verify plated surface for contact area for shielding is Electroless Nickel Gold (ENiG) and not Organic Solder Preservative (OSP).
+Verify selective plating of PCB if Ground Pad, Surface board-to-board contact, Antennae contact pad or PCB EMI contact shield/gasket is not OSP.",,"Drop test across temperature
+Design margin testing
+First Article Inspection on PCB including check for plating
+Include plating surface test report or C of C in FAI and evidence for PSO",,"3","60","No",,,
+"149","PCB Design and Components","Key press multiplied or different keys are displayed","qualib428_pic1.png",,"QUAL-LIB-428","SPR 22429
+SPR 22576","Incorrect key is activated","5","PCB electrical interference for EL backlight driver.
+The EL lines are long and routed above the Keypad matrix lines causing interference.",,"4","Identify sensitive lines for careful consideration during layout design i.e., high impedance inputs, oscillators, high power signals, etc.
+Ass signal integrity simulation during layout of the above signals.
+Placement of the  EL driver should be far enough from the end connector routing the EL signals in vicinity of the keypad matrix scan/return lines.
+Traces isolated from one another by ground plane, keep length at minimum, comply with EN-13049-02 EE design rules.",,"Perform signal integrity tests at EV and DV builds.
+Perform internal power supplies circuitry static and dynamic load tests.
+Perform oscillators frequency accuracy and purity.",,"3","60","No",,,
+"150","PCB Design and Components","Alternate component not meeting minimum turn ON voltage.",,,"QUAL-LIB-429",,"DS77 scanning function failed at 12V","8","The cost reduction alternative component did not have the same specifications as the original part.
+The design requires switch with minimum turn ON voltage of 1V.  The cost reduced alternative has an actual turn ON voltage of 2V.",,"4","Identify how the component is used in the circuit application and its critical function.
+Confirm the alternative component meets the circuit design intent.
+ ",,"Bench level test on board level.
+Engineering testing.
+Test and Validation at different interfaces.
+System level testing to validate against all use case scenarios.",,"3","96","No",,,
+"151","PCB Design and Components","Supercap thermal (burn) damage ","qualib430_pic1.png",,"QUAL-LIB-430",,"Unable to operate device","8","The supercap was hand soldered and was overheated by soldering for greater than the recommended duration.",,"4","Ensure PCB design supports minimal heat exposure to supercap leads and body preferably through hole with little to no hand solder excess heat exposure.
+Review and conform to manufacturer heat exposure specifications.
+Review the leads/pad size and confirm no damage to component or surrounding components if hand soldered.",,"Load life testing of components.
+Characterize component for performance over the PRD/published operating temperature of the product.
+ ",,"3","96","Yes",,,
+"152","Connectors and Flex Plating","Connectors fell off the main board","qualib577_pic1.png",,"QUAL-LIB-577","SPR 28834
+SPR 32434","No scan function of unable to operate device","8","The connector fell of the main board due to solder creep.  
+The connector is under a constant load/ compression.
+Thermal cycling or continued operation at high temperature.",,"4","Design should ensure there is no permanent load present on the solder joints (preferably no more than 0.1 N/mm2). If there is constant load on the connector, there should be additional supporting feature to the solder joint e.g. glue applied.
+Do not position connectors near a heat source e.g. battery.
+Select connector design which does not apply constant load to the solder joints.  If required by design, ensure availability of space for supporting feature.",,"Thermal Shock.
+Operating temperature cycling.
+Drop test across temperature.
+Tumble test.
+",,"3","96","No","https://spr.zebra.com/ViewSPR.aspx?sprID=28834",,
+"153","PCB Design and Components","Gold plated contact pads falling off from PCB","qualib578_pic1.png",,"QUAL-LIB-578","JIRA EE-3277","Unable to operate device","8","Soldering of gold contact pads to PCB results in gold embrittlement of solder joints (too much gold) or gold scavenge (too little gold) resulting to unreliable solder connections.",,"4","Avoid using gold contact pads for soldering to PCB.  Consider PCB selective plating process that can accommodate putting the proper gold (and Au plating thickness) directly to the PCB.  Gold contact pads directly printed to PCB eliminates the need for soldering, removing the risk of poor solder joint.","qualib578_pic2.png","Drop test across temperature
+Tumble test
+Teardown inspection to verify gold plated contacts remain secured after test exposure
+If use of Au pads is required, proper inspection after PCB build - no solder on contact surface per IPC-610 10.1.1 ""Target - Class 1, 2, 3).  No contamination on surface contact areas.
+X-ray inspection to ensure proper solder joint formation.  Voiding should be the result of flux off-gassing (typically round rather than irregular shaped) and not solder wicking on surface of Au pad.",,"3","96","Yes",,,
+"154","Switch","Reset switch not responding","qualib579_pic1.png",,"QUAL-LIB-579","SPR 34389","Device goes into factory reset wiping out configuration settings","7","Loss of switch tactility due to interference between the switch's plunger and the I/O gasket effectively pre-loading (actuating) the switch.  ",,"4","Design to ensure placement of the switch to PCB does not allow for any interference that would partially or completely pre-activate the switch.  
+PCB design group should have a CAD representation of switches with variable actuators to identify any potential interference.",,"Perform switch life test.
+Measure switch actuation force and tactile feedback.",,"3","84","No",,,
+"155","Antenna","LAN & GPS antennae broke off during drop test","qualib482_pic1.png",,"QUAL-LIB-482",,"Unable to connect to Wi-Fi and GPS","7","Poor anchoring",,"4","Design for adequate anchoring such as more than one screw to support antenna assembly or add epoxy for reinforcement.
+Pad size optimization for good solder joint.
+Design to account for part interference during drops and tumbles.",,"Drop tests
+Tumble test",,"3","84","No",,,
+"156","Cradles and Interconnect","Vehicle cradle unable to charge Terminal battery",,,,"SPR-45084","Device operation limited to available battery power","5","Flex cable connecting the connector and mainboard had cracked resulting to broken copper traces.  The crack was due to fatigue failure caused by the movement of the Flex cable when the Terminal is seated.  The Flex cable dressing has sharp bends causing high stress levels resulting to breaking of copper traces.","4f325b03-734c-41e9-a2fd-e69f302859e3.jpeg","3","Increase bend radius on Flex cable to avoid sharp bends.","009ddbc1-a570-48ff-8379-0008405ffd4d.jpeg","1) Apply appropriate amoung of load force during insertion life test to simulate filed condition.  Failure reproduction on SPR-45084 used 6kgf and during validation of proposed solution.
+
+2) Avoid sharp bends in dressing design of Flex cables. ",,"3","45","No","https://jira.zebra.com/browse/SPR-45084",,
+"157","Enclosure","Towel Bar was breaking during installation of hand strap.","bee3237a-a45c-446c-ba14-35b3fe85d43b.jpeg",,,"SPR-41878","User unable to securely fix Terminal to hand.","4","Insufficient thickness of the Towel Bar.  Location of the weld line is on the thin section of the plastic.","d11489ca-4c6d-49c5-a44e-2f08901dfd2a.jpeg","4","Towel Bar thickness should be no less than 1mm in cross-section.
+Avoid weld lines on thin areas of the plastic part.",,"Conduct moldflow analysis specifically on parts with thin areas that are likely to experience high levels of stress.  
+Perform life test on hand strap installation and removal.",,"3","48","No","https://jira.zebra.com/browse/SPR-41878",,
+"158","Enclosure","IPX5 test failure","2eb5d7e0-f9af-407b-b5d3-28a2dde21951.png",,,"SPR-50586","Failure to operate.","8","Insufficient compression of rubber seal.  Target compression rate was 0.15 but the actual compression was at 0.1.  Tolerance analysis did not pickup the issue due to dimensions used for the study were not from the final design causing the use of non-production intent dimensions resulting to incorrect conclusion.",,"4","1) Conduct Tolerance Analysis using dimensions from the poroduction intent design.
+2) Consider using Liquid Injection Molding (LIMS) design for rubber sealing as opposed to Hot Plate Molding process.
+3) Avoid slopes for sealing surfaces.  Vertical, Horizontal or Angular designs are preferred.  ",,"Test for battery sealing is performed on “battery standalone” units and on “terminals with battery installed” for system level testing.  The standard water ingress test should be adequate to pickup failure on this area.",,"3","96","No","https://jira.zebra.com/browse/SPR-50586",,
+"159","Soft Goods, Straps and Stylus","RS5100 device is not operating when attached to Hand Mount accessory (SG-RS5X6-HNMT-01).",,,,"SPR-48332
+SPR-50721","Unable to activate scan engine","8","Poor electrical contact between RS5100 device and the Hand Mount accessory due to insufficient compression of the Pogo pins resulting to non-contact or high contact resistance with the RS51 device. The design compression ratio is 50%, and the calculated compression ratio of the failed unit is approx. 40% which not includes the plastic housing deformation caused by the sealing foam between RS51 and the hand mount. If considering plastic housing deformation, the actual compression ratio will be less than 40%.
+
+The combination of 2 reasons:
+(1)  Incorrect conclusion was drawn from the Tolerance Analysis (TA) study due to relevant dimensions reflected in the 2D drawing were incorrect.
+
+ (2) Firefly terminal (USI): Because the PCB is installed into metal head with a tilt angle, the rubber is pinched between PCB and metal head boss, so the connector is about 0.20 lower than design.
+","f25c3cfb-3d53-47d3-bd33-28a7a855a743.jpeg","3","1) Ensure dimensions used for the TA study reflects the production intent design and is correctly reflected in the drawing.
+ie. SPR48332, ECRT ME ran tolerance analysis again and collected 30pcs data for all the dimensions missed on 2D drawings, working with the suppliers to adjust parameters to meet the target with 50% compression ratio, then updated 2D drawings to add/modify those dimensions/tolerance referenced in TA loop. 
+
+2) Verify in the 3D model and TA, the compression of the Pogo pins when engaged is at 50% minimum.
+
+3) For tilt installation, ensure adjacent area is free from risk of interference e.g., on SPR-4832 the design was updated to enlarge the opening at boss area to avoid pinching.
+","d0ac78f6-459d-4c81-81ae-fc83c37e51e0.png","1) During DFM check for possibility of interference e.g., pinching.
+
+2) Teardown inspection for indications of interference post Qualification, AFM, ORT.
+
+3) Designate critical dimensions during TA as critical dimensions in the 2D drawing.
+
+4) Verify Cpk of 1.33 for all critical dimensions during FAI
+",,"4","96","No","https://jira.zebra.com/browse/SPR-48332",,
+"160","Switch","Button cover bulging; rubber peeling away from case of button covers; button cover of exoskeleton broken and separated from case.
+
+Source:  SPR47337, TC53/58 Jaws exoskeleton's buttons swelled and expended out ward after about 50 days usage.
+","5aee3ec2-699f-48f7-bbc5-fd3224bd784b.jpeg",,,"
+
+SPR 47337","Unable to operate button function.","7","The rubber expansion results in the side keys bowing outward since they are only supported at the ends. The support for the keys was minimized in the design to decrease key activation force as driven by PdM and HF.
+
+The rubber expansion causes additional stress to the interface between the EXL9330 plastic and rubber causing the rubber to peel away from the plastic in some cases.
+
+Hand oils (oleic acid), cleaners (hand sanitizer), and out of spec chemicals (ex: Clorox) are being absorbed by overmold(DuPont Hytrel 4056).
+
+Chemical absorption of the Hytrel material causes the rubber to expand. 
+
+Ref:  The buttons on the TC53/58 (Jaws) exoskeleton are swelling and bulging outward.  The standard chemical testing could not identify this issue prior to release.
+
+",,"4","Implement the interlock design between the interface of Hytrel and EXL9330 materials to create more mechanical bonding where needed to provide resistance to chemical exposure.","9affbca1-7c2b-464f-9b27-a63172e9a257.jpeg","Update chemical testing methods and standards to align with real world use cases. It should be noted that the testing specifics may need to be different for different types of chemicals (Clorox) based on how frequently a device comes into contact with that chemical.
+",,"3","84","No","https://jira.zebra.com/browse/SPR-47337",,"https://jira.zebra.com/browse/SPR-47337"
+"161","Camera and Proximity Sensor","Camera inoperative.",,,,"SPR - 46005 TC56
+SPR - 47022 TC51 HC
+SPR - 46382 TC56
+","Camera flex traces appear discontinued under X-ray, causing camera artifacts and non-functionality.  In some cases, the camera seems to be working ok, however the traces are already damaged. ","5","Camera flex being folded and covered in copper foil (manipulated) prior to assembly, along with the fact that ED copper was used in manufacturing, instead of RA or HA copper. ED copper is less likely to withstand the flexural test this flex is under.
+The Zebra specifications state that the flex should use RA copper [at a minimum], especially in flexes that see bending/manipulation during assembly. ",,"4","1. The Zebra Flex strip specification should be shared with all the manufacturers and JDMs prior to design;
+2. The flexes that are folded and susceptible to broken traces should be X-ray checked post quality testing, and any broken traces should be considered ""failure in testing"" despite that component's functionality status.
+3. The need for implementation of additional shielding should be checked on every device, not added because of it being used historically;",,"Thermal Shock
+Drop Test
+Tumble Test",,"3","60","No",,,
+"162","Battery and Interconnect","Battery connection intermittent.  Battery contacts are stripped of gold, and deep gauges are present in the terminal side battery contacts [the blades].",,,,"SPR-47221","Device reboots when given a shake or pressure applied on the battery side.","8","1.  The battery is removed 2-3 times a day, and changed between terminals, the user is ""holding"" onto the battery throughout the day [exposure to debris, air, moisture] prior to using it in the terminal;
+2.  The battery is located in the terminal by the connector and all the other restraining features are allowing it to move too much, causing too much deflection in the connector's springs;
+3.  The contacts of the terminal connector do not have the proper amount of plating: both the Nickel plating and the Hard Gold plating are found in SEM analysis to be thinner than recommended;
+4.  The alloy used in the connector manufacturing is vaguely described in the datasheet as ""copper alloy"", and found to be too soft for this application. ","Picture1.png","4","1.  The connector's materials and plating should be specified and known prior to design and validated with a connectivity specialist.  The plating thickness is non-negotiable and meet the Zebra specifications.
+2.  The tolerance analysis must be reviewed by Zebra engineering and validated for minimal amount of relative movement/stress on contacts.",,"High Magnification inspection of the battery contacts plating condition after submitting to environmental tests e.g. 
+Vibration Test, Drop Test Tumble Test, ",,"3","96","No",,,
+"163","Battery and Interconnect","Corrosion on Charge Cradle pogo pins",,,,"SPR- 50132","The pogo contacts are corroded, develop heat during charging, melting the pogo pogo pin shroud (plastic) and the cradle plastic housing, leading to permanent failure of both the cradle and the terminal.","8","1.  The plating does not meet the Zebra Technologies minimum requirements:
+2.  The ball surface was not smooth enough to accept the nickel plating [crevices were present on the surface] and an additional copper flush plating was required after we changed the material from SUS304 to brass. 
+3.  Due to heat dissipation in the contact, the spring would re-form in the compressed position, no longer meeting the force needed to make a good contact.
+4.  This vendor [CCP] is using some substance to enhance the lubrication inside the pin, that over-time leads to dirt and moisture accumulation, enhancing the corrosion process.","Picture2.png","4","1.  The connector's base materials and plating sequence and thickness should be specified and known prior to purchase agreements.
+2.  The copper flushing is important when the manufacturing process does not result in smooth surfaces on the parts
+3.  Design must include temperature control in the charging cradle to avoid permanent failure of the terminal/cradles and customer environmental dangers.
+4.  The tolerance analysis must be reviewed by Zebra engineering and validated for minimal amount of relative movement/stress on contacts.
+",,"Chemical Test.  High magnification inspection of the contacts for any signs of corrosion and plating defects. In this case the defect was replicated by chemical testing. While the system did not show signs of miss-communication immediately following the testing, and by this standard would be considered ""passed"", the plating was missing, corrosions spots started, and it was just a matter of time until disconnection or overheating would appear. ",,"3","96","No",,,
+"164","Switch","Power button get stuck inwards of the housing","Screenshot 2024-02-12 120239.png",,,"SPR-47703, 48223, 50797, 50808, 51092, 51569, 52304","Switch does not have any tactile feedback. Power button stay on or off or does not allow the terminal to start/ turn on-off/reboot properly.","7","1) Power button silicone soft plunger O-ring seal is pushed inwards in the housing and due to the expansion of the material it can come back to the housing hole making the power button to get stuck inwards.
+
+2) Deterioration of the tool finish into a rough surface over time causing high amount of friction with the power button plunger which is made of soft material.
+
+3) Difficulty in maintaining high number of cavities for a specific tool e.g. 192 cavities for the TC2x power button. ",,"4","1) Perform a full check for cosmetic surface finish. No adding surface finish to a hole where a soft material will interact with friction.
+
+2) Silicone power button activation compression tolerance analysis check.
+
+3)  Submit for design review the O-ring vs. tolerances and the activation force/displacement of the O-ring. 
+
+4) Review of tooling & molding process to avoid cosmetic defects.
+",,"Thermal Shock
+Power Button Actuation Life Test",,"4","112","No",,,
+"165","Acoustics and Audio","Mic boom are becoming heavy with frost and moisture and are falling off while working in the freezer environment","Picture1.png",,,"SPR-50809","Headset mic freezing up, which won't allow the selector to communicate. 
+Static interference with the unit that limits the selector's ability to hear likely due to condensation that builds in the earpiece.","7","1.  Product was designed for -30 C operation but condensing humidity was not properly mitigated. Some warehouse use cases constantly cycle workers between freezer and cool dock (condensing) on top of just user breath concerns.
+2.  Use of a ""long boom"" version that allows the user to place the mic directly in front of the mouth caused almost immediate condensation issue.","Picture3.png","3","1.  Mechanical design should not use a design that requires a foam or mesh mic cover as humidity from the user's breath saturates the cover and then freezes to block audio. Changing the wind screen every 4 hours or when wet is impractical. When intended use case in refrigerated, design for a ""short boom"" that prevents the mic from being placed in front of the user's mouth.
+2. Systems Engineering should add/revise the requirement for audio products used in refrigerated areas to be ""CONDENSING"" as it is unavoidable.",,"1. Require condensing environment (Engineering & QTP) testing of the audio function cycling in and out of cold (freezer operating value) with humidity.
+2. Design reviews need to discuss real life use cases based on lighthouse customers using refrigerated use cases.",,"4","84","No",,,
+"166","Connectors and Flex Plating","There seems to be an inherent weakness in the construction of the USB cable, at the solder joint between the connector and the mini-PCB inside the cable. This should be strengthened by the shield but depending on the shield construction is not always done properly. ","TDM_failure.JPG",,,"SPR-53239","Weak solder joint in the USB cable leading to discontinuity in communication. ","9","Shield and /or premold of USB connector end is not done correctly. Premold short-shots and bleeding between contacts was observed. Two half shields where not locked correctly prior to overmolding for optimal strength. ","Reserved_ImageAttachment_[21]_[Image_x002d_RootCause][36]_[f1243c99-43a5-4e07-921a-db9f5b6cbb10][1]_[5].jpeg","8","Testing the cable in flexural strength while it is held by the connector's shell, instead of the overmold, it is more like the ""real use"" application. ",,"Continuity during and after flexural testing while the cable end is held by the connector shell.
+
+When testing the flexural strength of the USB cable, it would help if the cable is held by the connector body, instead of the overmolded end. In this configuration, the inherent weakness will be immediately apparent, as the cable will lose continuity if the shield is not designed properly, or there is insufficient solder on contacts. ",,"9","648","No","https://jira.zebra.com/browse/SPR-53239?filter=-1&jql=assignee%20%3D%20currentUser()%20AND%20resolution%20%3D%20Unresolved%20ORDER%20BY%20cf%5B21506%5D%20ASC%2C%20created%20DESC%2C%20updated%20DESC","ME240012-73
+SPR-53239","https://jira.zebra.com/browse/SPR-53239?filter=-1&jql=assignee%20%3D%20currentUser()%20AND%20resolution%20%3D%20Unresolved%20ORDER%20BY%20cf%5B21506%5D%20ASC%2C%20created%20DESC%2C%20updated%20DESC "
+"167","Switch","Contamination and corrosion on side key sub-assembly.  Contamination on adhesive of dome sheet.  Corrosion on metal dome switch and on gold pad surface of FPC.","Reserved_ImageAttachment_[32]_[Image_x0020__x002d__x0020_Failur][36]_[f8d0c4a0-dac2-42af-b881-b1b8131bcca5][3]_[125].jpeg",,,"SPR-50892/ 52678/ 53171/ 53572","Unable to operate scan engine using the side key button.","8","The side key sub-assembly is outside of the sealing area which consist of the FPC and metal dome switch.  Sealing between the metal dome switch and gold pad is insufficient at 0.02mm adhesive thickness.","Reserved_ImageAttachment_[21]_[Image_x002d_RootCause][36]_[39e7049b-b910-4b37-936d-9241fbbe6b61][3]_[148].jpeg","4","1) FPC and all electrical contacts should stay inside the sealed terminal or sealed by the rubber. Ex. TC53 vs. TC21.
+
+2)  If metal domes or electrical contacts are not full-sealed by rubber or not within the sealed boundaries of the terminal, there is a need to seal this sub-assembly using thicker and water resistant adhesive to avoid water ingress.
+
+3) Confirm properties of rubber material when used for sealing  to prevent deformation.
+
+4) Use pressure sensitive paper as part of process control to confirm sufficient bonding and uniformity of sealing adhesive.","Reserved_ImageAttachment_[22]_[Image_x002d_Prevention][36]_[47e00f8b-56bc-4d08-ac78-2454895b93f8][3]_[141].jpeg","1) Since water is transparent and difficult to detect, conduct RED ink test on button assembly to confirm if water would not be able to flow down to the internal electrical contacts.
+
+2) Ingress Protection testing during ENG, Qualification and ORT cycles.","Reserved_ImageAttachment_[21]_[Image_x002d_Detection][36]_[788c52e0-0fe2-4827-8fbd-d8ab242c71ef][3]_[145].jpeg","4","128","Yes","https://jira.zebra.com/browse/SPR-50892",,
+"168","Touch Panel","Scratches and damages on Touch Panel of Tablet products.","Reserved_ImageAttachment_[32]_[Image_x0020__x002d__x0020_Failur][36]_[5796e500-4e15-4246-9e5b-317d8255ea35][2]_[17].jpeg","Reserved_ImageAttachment_[13]_[Image2_x002d_][36]_[7b277d89-3a7f-45a4-8c74-bb28a5d1e212][2]_[21].jpeg",,"SPR53826, SPR53637, SPR50324","Reduced image clarity and readability.","5","The  anti-reflective coating application process of using Chemical Vapor Deposition (CVD) is susceptible to damage compared to the Sputtering process regardless of the hardness of the coating.",,"4","1) Sputtering deposition process should be the preferred process for anti-reflective coating.
+
+2) Tablet SKU's should always be released with a screen protector accessory to prevent premature wear out on touch panel of the tablet.","Reserved_ImageAttachment_[22]_[Image_x002d_Prevention][8]_[Picture5][2]_[27].jpg","Conduct Falling Sand testmethod following ASTM D968-22 method A.",,"4","80","No","https://jira.zebra.com/browse/SPR-53826",,
+"169","Battery and Interconnect","Device intermittently shuting down and rebooting.",,,,"53980, 54685","Loss of data.  Interruption to customer productivity.","6","Corrosion on battery connector pins causing intermittent contact.  Corrosion is caused by the following factors:
+1) Battery pack movement in the housing on the ""Y"" and ""Z"" directions.
+2) Dimple contact design anf uneven material hardness on battery connector mating parts.","Reserved_ImageAttachment_[21]_[Image_x002d_RootCause][36]_[200500e7-d2f6-4a42-8431-3154ac519891][1]_[1].jpeg","4","1) Robust design of battery cover to prevent movement of battery pack on all 3 axes (X, Y, Z).
+2) Use of spring contact design as opposed to dimple contact design.
+3) Select materials with the same hardness level.","Reserved_ImageAttachment_[22]_[Image_x002d_Prevention][36]_[1b1b60ac-61a0-4313-b03d-705b40df21ef][1]_[3].jpeg","1) Oak Box test
+2) Vibration design margin test",,"4","96","No","https://jira.zebra.com/browse/SPR-53980",,
+"170","Connectors and Flex Plating","I/O contact corrosion when product is used in a freezer and/or condensing environment","Reserved_ImageAttachment_[32]_[Image_x0020__x002d__x0020_Failur][36]_[b6be64f8-1106-4d0c-88a2-88689b6f6261][2]_[10].jpeg","Reserved_ImageAttachment_[13]_[Image2_x002d_][36]_[64a3172f-dcbb-48dc-ac9e-643a477cdc7f][2]_[14].jpeg",,"SPR-51264/ 50723/ 51666/ 51510 (and others)","Intermittent connection resulting to peripheral device e.g., corded ring scanner inoperable.","8","Failure analysis indicates corrosion via dezincification and electrolytic corrosion. This corrosion requires:
+- disimular metals (within the brass alloy) creating a galvanic potential; in this case the copper and zinc that make up the brass base metal.
+- an electrolyte, often sweat or contaminate present in a condensing environment
+- and current flow between the two metals","Reserved_ImageAttachment_[21]_[Image_x002d_RootCause][36]_[4212b62a-e287-48bc-ac6f-e5ea5cec7654][2]_[16].jpeg","4","One of the three factors from Root Cause section need to be interupted:
+
+1. Eliminate exposure of disimilar metals:
+- plating able to fully isolate brass base material
+- brass or base metal made up of a α-phase only
+
+2. Contact should be within the IP seal and therefore isolated from potential electrolyte
+
+3. Current flow managed (as was done for WT64) described in JIRA EE-20019: 
+""DETECT pin - reduce pullup to 200k for irq & SW will switch in 12k7 for device interrogation. Following device identification, the 12k7 will be turned off again and only the soft 200k pullup will remain, This will also tolerate large swings in DETECT pin resistance to GND before a IRQ is generated again. The device will not be constantly interrogated for proper resistance.
+
+PWR_IN pins - The pogo charging pins will be used for all charge cradles and the PWR_IN pins on the rugged IO will be FET isolated. USB cable is the only circumstance when these pins are used
+
+TX pin - Previously the uart TX pin was used while in the charge cradle to drive the cradle LED. We have deleted this function and we will have two LEDs in the terminal.""",,"Test the unit using the Contact Corrosion in Condensing Environment procedure to evaluate the likelyhood of failure.","Reserved_ImageAttachment_[21]_[Image_x002d_Detection][36]_[069d2db4-54bc-4d88-9526-2b3ca47fbc51][1]_[6].jpeg","3","96","No","https://jira.zebra.com/browse/SPR-51264",,
